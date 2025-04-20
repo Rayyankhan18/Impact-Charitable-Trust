@@ -38,7 +38,8 @@ const CallToAction = () => {
         </div>
       </div>
       
-      <style jsx>{`
+      {/* Fix: Use a proper style element instead of JSX */}
+      <style dangerouslySetInnerHTML={{ __html: `
         @keyframes float {
           0% { transform: translate(0, 0); opacity: 0; }
           50% { opacity: 1; }
@@ -47,7 +48,7 @@ const CallToAction = () => {
         .animate-float {
           animation: float 20s ease-in-out infinite;
         }
-      `}</style>
+      `}} />
     </section>
   );
 };
