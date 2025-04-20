@@ -1,0 +1,10 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <rect width="100" height="100" rx="20" fill="white"/>
+  <!-- Green check/person -->
+  <path d="M30,40 Q40,20 50,40 L70,20 L60,50 L30,40" fill="#8AD03F" />
+  <!-- Blue arc/person -->
+  <path d="M60,50 Q80,60 70,80 L40,70 L60,50" fill="#34B5E5" />
+  <!-- Yellow dot/person -->
+  <circle cx="40" cy="70" r="10" fill="#FFF176" />
+</svg>

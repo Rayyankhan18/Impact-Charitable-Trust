@@ -1,0 +1,62 @@
+
+import { Button } from "@/components/ui/button";
+
+const AboutSection = () => {
+  return (
+    <section id="about" className="section-padding bg-gray-50">
+      <div className="container mx-auto px-4">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="order-2 lg:order-1">
+            <div className="relative">
+              <div className="rounded-xl overflow-hidden shadow-xl">
+                <img
+                  src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1631&q=80"
+                  alt="Impact Charitable Trust volunteers"
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+              <div className="absolute -bottom-6 -right-6 bg-white p-4 rounded-lg shadow-lg">
+                <p className="text-impact-green font-bold text-xl">Est. 2018</p>
+                <p className="text-gray-600">Making a difference</p>
+              </div>
+            </div>
+          </div>
+          
+          <div className="order-1 lg:order-2">
+            <div className="inline-block bg-impact-green/10 rounded-full px-4 py-1 text-impact-green font-medium text-sm mb-4">
+              About Us
+            </div>
+            <h2 className="text-impact-dark mb-6">Our Vision & Mission</h2>
+            <p className="text-gray-600 mb-4">
+              Impact Charitable Trust was established in February 2018 with the vision of uplifting the educational and financial status of women and children, regardless of caste, creed, or religion.
+            </p>
+            <p className="text-gray-600 mb-6">
+              Our mission is to set up and manage educational institutions, hospitals, technical and training centers, commercial institutes, and computer learning centers to support the backward classes and minority communities without any discrimination.
+            </p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+              <div className="bg-white p-4 rounded-lg shadow-sm">
+                <h3 className="text-impact-green font-bold text-lg mb-2">Our Vision</h3>
+                <p className="text-gray-600">
+                  To create a society where every individual has equal access to opportunities for growth and development.
+                </p>
+              </div>
+              <div className="bg-white p-4 rounded-lg shadow-sm">
+                <h3 className="text-impact-blue font-bold text-lg mb-2">Our Mission</h3>
+                <p className="text-gray-600">
+                  To empower marginalized communities through education, healthcare, and financial assistance.
+                </p>
+              </div>
+            </div>
+            
+            <Button className="bg-impact-green hover:bg-impact-green/90">
+              Learn More About Us
+            </Button>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default AboutSection;

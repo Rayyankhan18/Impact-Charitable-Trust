@@ -52,6 +52,16 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				impact: {
+					green: '#8AD03F',
+					blue: '#34B5E5',
+					yellow: '#FFF176',
+					dark: '#212121',
+					light: '#F5F5F5',
+					'green-light': '#E8F5E9',
+					'blue-light': '#E1F5FE',
+					'yellow-light': '#FFFDE7',
+				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
