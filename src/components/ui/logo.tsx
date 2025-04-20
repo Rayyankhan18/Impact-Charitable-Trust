@@ -11,7 +11,7 @@ const Logo = ({ className, includeText = true }: LogoProps) => {
     <div className={cn("flex items-center gap-2", className)}>
       <div className="relative h-10 w-10 md:h-12 md:w-12">
         <img 
-          src="/impact-trust-logo.png" 
+          src="/impact-logo.svg" 
           alt="Impact Charitable Trust Logo" 
           className="h-full w-auto object-contain"
         />

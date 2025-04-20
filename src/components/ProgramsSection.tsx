@@ -1,8 +1,35 @@
 
 import { Book, Heart, Award, GraduationCap } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useEffect, useState } from "react";
 
 const ProgramsSection = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [isInView, setIsInView] = useState(false);
+  
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting) {
+        setIsInView(true);
+      }
+    }, { threshold: 0.1 });
+    
+    const section = document.getElementById('programs-section');
+    if (section) observer.observe(section);
+    
+    return () => {
+      if (section) observer.unobserve(section);
+    };
+  }, []);
+  
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveIndex(prev => (prev + 1) % programs.length);
+    }, 4000);
+    
+    return () => clearInterval(interval);
+  }, []);
+
   const programs = [
     {
       id: 1,
@@ -13,6 +40,7 @@ const ProgramsSection = () => {
       description:
         "Free coaching classes for school dropouts and special training for Islamic scholars to become professionals. We help students pass exams through recognized boards.",
       link: "#education",
+      image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80",
     },
     {
       id: 2,
@@ -23,6 +51,7 @@ const ProgramsSection = () => {
       description:
         "Free medical camps, mobile counseling centers, and awareness campaigns on HIV/AIDS, Hepatitis B, Malaria, Dengue, and Polio vaccination.",
       link: "#healthcare",
+      image: "https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
     },
     {
       id: 3,
@@ -33,6 +62,7 @@ const ProgramsSection = () => {
       description:
         "Financial assistance for deserving students covering tuition fees, examination fees, boarding and lodging, textbooks and study materials.",
       link: "#scholarships",
+      image: "https://images.unsplash.com/photo-1627556704290-2b1f5853ff78?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
     },
     {
       id: 4,
@@ -43,38 +73,98 @@ const ProgramsSection = () => {
       description:
         "Support for the elderly, widows, orphans, transgender individuals with vocational training, and other initiatives for economic empowerment.",
       link: "#special-programs",
+      image: "https://images.unsplash.com/photo-1593113598332-cd59a93f9724?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
     },
   ];
 
   return (
-    <section id="programs" className="section-padding bg-white">
-      <div className="container mx-auto px-4">
+    <section id="programs-section" className="section-padding bg-gradient-to-br from-white via-impact-green/5 to-impact-blue/5 relative overflow-hidden">
+      {/* Background decorative elements */}
+      <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+        <div className="absolute top-1/4 left-10 w-64 h-64 bg-impact-green/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-1/4 right-10 w-80 h-80 bg-impact-blue/10 rounded-full blur-3xl"></div>
+      </div>
+      
+      <div className="container mx-auto px-4 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-impact-dark mb-4">Our Programs</h2>
+          <div className="inline-block bg-white/50 backdrop-blur-sm rounded-full px-4 py-1 text-impact-dark font-medium text-sm mb-4">
+            Our Focus Areas
+          </div>
+          <h2 className="text-impact-dark mb-4 bg-gradient-to-r from-impact-green via-impact-blue to-impact-yellow bg-clip-text text-transparent">Our Programs</h2>
           <p className="text-gray-600 text-lg">
             We develop initiatives that create lasting change through education, healthcare, financial assistance, and special programs for vulnerable communities.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {programs.map((program) => (
-            <div
-              key={program.id}
-              className={`rounded-xl ${program.color} p-6 border-l-4 ${program.borderColor} shadow-sm card-hover`}
-            >
-              <div className="mb-4">{program.icon}</div>
-              <h3 className="text-xl font-bold mb-2 text-impact-dark">
-                {program.title}
-              </h3>
-              <p className="text-gray-600 mb-4">{program.description}</p>
-              <a
-                href={program.link}
-                className="inline-block font-medium text-impact-dark hover:underline"
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-20">
+          <div className="hidden lg:block">
+            {programs.map((program, index) => (
+              <div 
+                key={program.id}
+                className={`rounded-xl overflow-hidden shadow-xl transition-all duration-700 absolute ${
+                  index === activeIndex 
+                    ? "opacity-100 translate-y-0" 
+                    : "opacity-0 translate-y-10"
+                }`}
+                style={{ display: index === activeIndex ? 'block' : 'none' }}
               >
-                Learn more →
-              </a>
+                <img 
+                  src={program.image} 
+                  alt={program.title}
+                  className="w-full h-full object-cover rounded-xl aspect-[4/3]"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent rounded-xl">
+                  <div className="absolute bottom-0 left-0 p-8">
+                    <h3 className="text-white text-2xl font-bold mb-2">{program.title}</h3>
+                    <p className="text-white/90 mb-4">{program.description}</p>
+                    <Button className="bg-white text-impact-dark hover:bg-opacity-90">
+                      Learn more →
+                    </Button>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+          
+          <div>
+            <div className="space-y-6">
+              {programs.map((program, index) => (
+                <div
+                  key={program.id}
+                  className={`rounded-xl ${program.color} p-6 border-l-4 ${
+                    program.borderColor
+                  } shadow-md transition-all duration-300 cursor-pointer ${
+                    isInView ? "animate-fade-in" : "opacity-0"
+                  } ${
+                    activeIndex === index 
+                      ? "scale-105 shadow-xl" 
+                      : "hover:scale-102 hover:shadow-lg"
+                  }`}
+                  style={{ 
+                    animationDelay: `${index * 150}ms`,
+                    transform: `translateY(${isInView ? '0' : '20px'})` 
+                  }}
+                  onClick={() => setActiveIndex(index)}
+                >
+                  <div className="flex items-start gap-4">
+                    <div className="bg-white/80 p-3 rounded-full">{program.icon}</div>
+                    <div>
+                      <h3 className="text-xl font-bold mb-2 text-impact-dark">
+                        {program.title}
+                      </h3>
+                      <p className="text-gray-600 mb-4">{program.description}</p>
+                      <a
+                        href={program.link}
+                        className="inline-block font-medium text-impact-dark hover:underline"
+                      >
+                        Learn more →
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
         </div>
 
         <div className="mt-16 text-center">
@@ -82,7 +172,7 @@ const ProgramsSection = () => {
             Our programs are designed to create sustainable impact. We believe in empowering communities through education, healthcare, and financial support.
           </p>
           <Button 
-            className="bg-impact-green hover:bg-impact-green/90 text-white font-medium px-8 py-3"
+            className="bg-gradient-to-r from-impact-green to-impact-blue text-white font-medium px-8 py-3 shadow-lg hover:shadow-xl transition-all duration-300 animate-pulse"
           >
             Support Our Work
           </Button>
