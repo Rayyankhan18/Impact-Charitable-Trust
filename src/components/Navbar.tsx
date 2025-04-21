@@ -1,7 +1,6 @@
 
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-import { Link } from "react-router-dom";
 import Logo from "@/components/ui/logo";
 import { Button } from "@/components/ui/button";
 
@@ -35,8 +34,8 @@ const Navbar = () => {
       }`}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
-        {/* Bigger logo only, no text */}
-        <Logo className="h-20 w-auto md:h-28" />
+        {/* Smaller professional size logo */}
+        <Logo className="h-12 w-auto md:h-16" />
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
@@ -87,4 +86,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
