@@ -8,9 +8,12 @@ const Footer = () => {
   return (
     <footer className="bg-impact-dark text-white">
       <div className="container mx-auto px-4 py-12">
+        <div className="flex flex-col items-center mb-6">
+          <Logo className="mb-4 h-20 w-20" includeText={false} />
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div>
-            <Logo className="mb-6 text-white" includeText={false} />
+            {/* Removed duplicate logo, just leave the org name and tagline */}
             <h3 className="text-white text-xl font-bold mb-2">Impact Charitable Trust</h3>
             <p className="text-gray-300 mb-4">
               Empowering lives through education, healthcare, and compassion since 2018.

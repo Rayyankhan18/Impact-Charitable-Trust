@@ -1,38 +1,8 @@
 
 import { Button } from "@/components/ui/button";
-import { Heart, Calendar, Gift } from "lucide-react";
+import { Gift } from "lucide-react";
 
 const DonateSection = () => {
-  const donationOptions = [
-    {
-      id: 1,
-      title: "One-Time Donation",
-      icon: <Heart className="h-6 w-6 text-white" />,
-      color: "bg-impact-green",
-      description: "Make a one-time donation to support our work and impact lives.",
-      amounts: [500, 1000, 2500, 5000],
-      defaultAmount: 1000,
-    },
-    {
-      id: 2,
-      title: "Monthly Giving",
-      icon: <Calendar className="h-6 w-6 text-white" />,
-      color: "bg-impact-blue",
-      description: "Become a regular donor and support our programs consistently.",
-      amounts: [200, 500, 1000, 2000],
-      defaultAmount: 500,
-    },
-    {
-      id: 3,
-      title: "Sponsor a Child",
-      icon: <Gift className="h-6 w-6 text-white" />,
-      color: "bg-impact-yellow",
-      description: "Sponsor a child's education, healthcare, and overall development.",
-      amounts: [1500, 3000, 5000, 10000],
-      defaultAmount: 3000,
-    },
-  ];
-
   return (
     <section className="section-padding bg-gradient-to-br from-impact-green/5 via-white to-impact-blue/5">
       <div className="container mx-auto px-4">
@@ -46,45 +16,7 @@ const DonateSection = () => {
             <p className="text-sm">Donations are eligible for tax exemption under Section 80G</p>
           </div>
         </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-          {donationOptions.map((option) => (
-            <div key={option.id} className="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100">
-              <div className={`${option.color} p-4 flex items-center gap-3`}>
-                <div className="bg-white/20 rounded-full p-2">
-                  {option.icon}
-                </div>
-                <h3 className="text-xl font-bold text-white">{option.title}</h3>
-              </div>
-              <div className="p-6">
-                <p className="text-gray-600 mb-6">{option.description}</p>
-                
-                <div className="grid grid-cols-2 gap-3 mb-6">
-                  {option.amounts.map((amount) => (
-                    <button
-                      key={amount}
-                      className={`py-2 px-4 rounded border ${
-                        amount === option.defaultAmount
-                          ? "bg-gray-100 border-gray-300 font-medium"
-                          : "border-gray-200 hover:bg-gray-50"
-                      }`}
-                    >
-                      ₹{amount}
-                    </button>
-                  ))}
-                </div>
-                
-                <Button className={`w-full ${
-                  option.id === 1 ? "bg-impact-green hover:bg-impact-green/90" :
-                  option.id === 2 ? "bg-impact-blue hover:bg-impact-blue/90" :
-                  "bg-impact-yellow hover:bg-impact-yellow/90 text-impact-dark"
-                }`}>
-                  Donate Now
-                </Button>
-              </div>
-            </div>
-          ))}
-        </div>
+        {/* Removed donation boxes here */}
 
         <div className="bg-white rounded-xl shadow-lg p-8 max-w-4xl mx-auto">
           <div className="flex flex-col md:flex-row items-center gap-8">

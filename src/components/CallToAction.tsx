@@ -28,17 +28,16 @@ const CallToAction = () => {
             Impact Charitable Trust believes that every child deserves a fair chance—especially the most deprived. We are committed to delivering change through education, healthcare, and financial empowerment.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="bg-white text-impact-green hover:bg-gray-100 text-lg px-8 py-6 shadow-xl hover:shadow-2xl transform transition-all duration-300 hover:-translate-y-1">
+            <Button className="bg-impact-green hover:bg-impact-green/90 text-white text-lg px-8 py-6 shadow-xl hover:shadow-2xl transform transition-all duration-300 hover:-translate-y-1">
               Donate Now
             </Button>
-            <Button variant="outline" className="border-white text-white hover:bg-white/10 text-lg px-8 py-6 shadow-xl hover:shadow-2xl transform transition-all duration-300 hover:-translate-y-1">
+            <Button className="bg-impact-green hover:bg-impact-green/90 text-white text-lg px-8 py-6 shadow-xl hover:shadow-2xl transform transition-all duration-300 hover:-translate-y-1">
               Become a Volunteer
             </Button>
           </div>
         </div>
       </div>
       
-      {/* Fix: Use a proper style element instead of JSX */}
       <style dangerouslySetInnerHTML={{ __html: `
         @keyframes float {
           0% { transform: translate(0, 0); opacity: 0; }

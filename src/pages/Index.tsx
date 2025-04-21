@@ -1,3 +1,4 @@
+
 import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
@@ -10,6 +11,7 @@ import ContactSection from "@/components/ContactSection";
 import CallToAction from "@/components/CallToAction";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
+import FounderSection from "@/components/FounderSection";
 
 const Index = () => {
   // Handle smooth scrolling for anchor links
@@ -42,6 +44,7 @@ const Index = () => {
         <HeroSection />
         <AboutSection />
         <ProgramsSection />
+        <FounderSection />
         <SpecialPrograms />
         <ImpactSection />
         <DonateSection />
