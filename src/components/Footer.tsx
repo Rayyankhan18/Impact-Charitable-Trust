@@ -9,8 +9,8 @@ const Footer = () => {
     <footer className="bg-impact-dark text-white">
       <div className="container mx-auto px-4 py-12">
         <div className="flex flex-col items-center mb-6">
-          {/* Add logo above Impact Charitable Trust with professional footer size */}
-          <Logo className="mb-4 h-16 w-auto" />
+          {/* Add logo above Impact Charitable Trust with small professional footer size */}
+          <Logo className="mb-4 h-10 w-auto" />
         </div>
         <h3 className="text-white text-xl font-bold mb-2 text-center">Impact Charitable Trust</h3>
         <p className="text-gray-300 mb-4 text-center">
