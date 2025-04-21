@@ -4,25 +4,22 @@ import Logo from "@/components/ui/logo";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  
+
   return (
     <footer className="bg-impact-dark text-white">
       <div className="container mx-auto px-4 py-12">
         <div className="flex flex-col items-center mb-6">
-          <Logo className="mb-4 h-20 w-20" includeText={false} />
+          {/* Add logo above Impact Charitable Trust */}
+          <Logo className="mb-4 h-24 w-auto" />
         </div>
+        <h3 className="text-white text-xl font-bold mb-2 text-center">Impact Charitable Trust</h3>
+        <p className="text-gray-300 mb-4 text-center">
+          Empowering lives through education, healthcare, and compassion since 2018.
+        </p>
+        <p className="text-gray-300 flex items-center justify-center gap-1 mb-6">
+          Made with <Heart className="h-4 w-4 text-impact-green" fill="#8AD03F" /> for a better tomorrow
+        </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-          <div>
-            {/* Removed duplicate logo, just leave the org name and tagline */}
-            <h3 className="text-white text-xl font-bold mb-2">Impact Charitable Trust</h3>
-            <p className="text-gray-300 mb-4">
-              Empowering lives through education, healthcare, and compassion since 2018.
-            </p>
-            <p className="text-gray-300 flex items-center gap-1">
-              Made with <Heart className="h-4 w-4 text-impact-green" fill="#8AD03F" /> for a better tomorrow
-            </p>
-          </div>
-          
           <div>
             <h4 className="text-lg font-bold mb-4 text-white">Quick Links</h4>
             <ul className="space-y-2">
@@ -43,7 +40,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          
+
           <div>
             <h4 className="text-lg font-bold mb-4 text-white">Programs</h4>
             <ul className="space-y-2">
@@ -64,7 +61,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          
+
           <div>
             <h4 className="text-lg font-bold mb-4 text-white">Get Involved</h4>
             <ul className="space-y-2">
@@ -86,7 +83,7 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-        
+
         <div className="border-t border-gray-700 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 mb-4 md:mb-0">
@@ -111,3 +108,4 @@ const Footer = () => {
 };
 
 export default Footer;
+

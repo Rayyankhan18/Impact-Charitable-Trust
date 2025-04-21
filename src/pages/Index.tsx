@@ -12,6 +12,7 @@ import CallToAction from "@/components/CallToAction";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
 import FounderSection from "@/components/FounderSection";
+import DonationVolunteerSection from "@/components/DonationVolunteerSection";
 
 const Index = () => {
   // Handle smooth scrolling for anchor links
@@ -22,7 +23,7 @@ const Index = () => {
         e.preventDefault();
         const href = target.getAttribute('href');
         if (href === '#') return;
-        
+
         const element = document.querySelector(href || '#');
         if (element) {
           window.scrollTo({
@@ -45,9 +46,21 @@ const Index = () => {
         <AboutSection />
         <ProgramsSection />
         <FounderSection />
-        <SpecialPrograms />
+        <section className="section-padding container mx-auto px-4 mb-16">
+          <h2 className="text-3xl font-bold mb-6 text-impact-dark text-center">Special Programs</h2>
+          <div className="flex flex-col md:flex-row items-center justify-center gap-10">
+            {/* Stock image added above Special Programs section */}
+            <img
+              src="https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=600&q=80"
+              alt="Special Programs"
+              className="rounded-lg shadow-lg max-w-md object-cover"
+            />
+            <SpecialPrograms />
+          </div>
+        </section>
         <ImpactSection />
         <DonateSection />
+        <DonationVolunteerSection />
         <CallToAction />
         <ContactSection />
       </main>
@@ -58,3 +71,4 @@ const Index = () => {
 };
 
 export default Index;
+

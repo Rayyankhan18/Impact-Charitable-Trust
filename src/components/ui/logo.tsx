@@ -1,29 +1,22 @@
 
-import { cn } from "@/lib/utils";
-
 interface LogoProps {
   className?: string;
-  includeText?: boolean;
+  includeText?: boolean; // We will no longer use text as the user wants the exact logo image only
 }
 
-const Logo = ({ className, includeText = true }: LogoProps) => {
+const Logo = ({ className, includeText = false }: LogoProps) => {
+  // Using the exact uploaded logo image and allowing resizing via className
   return (
-    <div className={cn("flex items-center gap-2", className)}>
-      <div className="relative h-16 w-16 md:h-24 md:w-24">
-        <img 
-          src="/impact-logo.svg" 
-          alt="Impact Charitable Trust Logo" 
-          className="h-full w-auto object-contain"
-        />
-      </div>
-      {includeText && (
-        <div className="flex flex-col items-start">
-          <span className="font-bold text-2xl md:text-3xl leading-none text-impact-dark">IMPACT</span>
-          <span className="text-base md:text-lg font-medium text-gray-600 leading-tight">CHARITABLE TRUST</span>
-        </div>
-      )}
+    <div className={className}>
+      <img
+        src="/lovable-uploads/61656ee7-1563-4b3b-9b7e-1227794adb82.png"
+        alt="Impact Charitable Trust Logo"
+        className="w-full h-auto object-contain"
+        draggable={false}
+      />
     </div>
   );
 };
 
 export default Logo;
+
