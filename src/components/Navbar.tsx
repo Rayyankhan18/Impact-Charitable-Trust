@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import Logo from "@/components/ui/logo";
@@ -35,7 +34,7 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
         {/* Smaller professional size logo */}
-        <Logo className="h-8 w-auto md:h-10" />
+        <Logo className="h-12 w-auto md:h-16" />
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
