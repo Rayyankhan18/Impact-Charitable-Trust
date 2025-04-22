@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -33,10 +32,12 @@ const Navbar = () => {
       }`}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
-        {/* Removed Logo component */}
-        <div className="text-impact-dark font-bold text-xl">Impact Trust</div>
+        <img 
+          src="/lovable-uploads/07dd1093-54e1-4bec-9228-a16d9058b83a.png"
+          alt="Impact Charitable Trust Logo"
+          className="h-8 w-auto"
+        />
 
-        {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
           {navLinks.map((link) => (
             <a
@@ -50,7 +51,6 @@ const Navbar = () => {
           <Button className="bg-impact-green hover:bg-impact-green/90">Donate Now</Button>
         </nav>
 
-        {/* Mobile Menu Button */}
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           className="md:hidden text-impact-dark"
@@ -60,7 +60,6 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile Navigation */}
       {isMenuOpen && (
         <div className="md:hidden absolute top-full left-0 right-0 bg-white shadow-lg">
           <nav className="container mx-auto px-4 py-4 flex flex-col space-y-4">
