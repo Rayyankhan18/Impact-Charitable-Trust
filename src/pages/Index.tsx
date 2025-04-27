@@ -46,18 +46,19 @@ const Index = () => {
         <AboutSection />
         <ProgramsSection />
         <FounderSection />
-        <section className="section-padding container mx-auto px-4 mb-16">
-          <h2 className="text-3xl font-bold mb-6 text-impact-dark text-center">Special Programs</h2>
-          <div className="flex flex-col md:flex-row items-center justify-center gap-10">
-            {/* Stock image added above Special Programs section */}
-            <img
-              src="https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=600&q=80"
-              alt="Special Programs"
-              className="rounded-lg shadow-lg max-w-md object-cover"
-            />
-            <SpecialPrograms />
-          </div>
-        </section>
+        <div className="bg-gradient-to-br from-white via-impact-green/5 to-impact-blue/5">
+          <section className="container mx-auto px-4 py-20">
+            <h2 className="text-3xl font-bold mb-12 text-impact-dark text-center">Special Programs</h2>
+            <div className="flex flex-col md:flex-row items-center justify-center gap-10">
+              <img
+                src="https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=600&q=80"
+                alt="Special Programs"
+                className="rounded-lg shadow-lg max-w-md w-full object-cover h-[400px]"
+              />
+              <SpecialPrograms />
+            </div>
+          </section>
+        </div>
         <ImpactSection />
         <DonateSection />
         <DonationVolunteerSection />
@@ -71,4 +72,3 @@ const Index = () => {
 };
 
 export default Index;
-
