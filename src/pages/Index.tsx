@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
@@ -15,7 +14,6 @@ import FounderSection from "@/components/FounderSection";
 import DonationVolunteerSection from "@/components/DonationVolunteerSection";
 
 const Index = () => {
-  // Handle smooth scrolling for anchor links
   useEffect(() => {
     const handleAnchorClick = (e: MouseEvent) => {
       const target = e.target as HTMLElement;
@@ -46,7 +44,7 @@ const Index = () => {
         <AboutSection />
         <ProgramsSection />
         <FounderSection />
-        <div className="bg-gradient-to-br from-white via-impact-green/5 to-impact-blue/5">
+        <div className="mt-20">
           <section className="container mx-auto px-4 py-20">
             <h2 className="text-3xl font-bold mb-12 text-impact-dark text-center">Special Programs</h2>
             <div className="flex flex-col md:flex-row items-center justify-center gap-10">
