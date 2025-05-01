@@ -1,3 +1,4 @@
+
 import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
@@ -12,6 +13,8 @@ import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
 import FounderSection from "@/components/FounderSection";
 import DonationVolunteerSection from "@/components/DonationVolunteerSection";
+import SuccessStoriesSection from "@/components/SuccessStoriesSection";
+import DirectorsSection from "@/components/DirectorsSection";
 
 const Index = () => {
   useEffect(() => {
@@ -43,9 +46,11 @@ const Index = () => {
         <HeroSection />
         <AboutSection />
         <ProgramsSection />
+        <SuccessStoriesSection />
         <FounderSection />
-        <div className="mt-20">
-          <section className="container mx-auto px-4 py-20">
+        <DirectorsSection />
+        <div className="bg-gradient-to-br from-white via-impact-green/5 to-impact-blue/5">
+          <section className="container mx-auto px-4 py-20" id="special-programs">
             <h2 className="text-3xl font-bold mb-12 text-impact-dark text-center">Special Programs</h2>
             <div className="flex flex-col md:flex-row items-center justify-center gap-10">
               <img

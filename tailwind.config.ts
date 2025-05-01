@@ -100,6 +100,11 @@ export default {
 					'0%, 100%': { opacity: 1 },
 					'50%': { opacity: 0.5 },
 				},
+				'pulse-star': {
+					'0%': { opacity: 1, transform: 'scale(1)' },
+					'50%': { opacity: 0.6, transform: 'scale(0.8)' },
+					'100%': { opacity: 1, transform: 'scale(1)' },
+				},
 				bounce: {
 					'0%, 100%': { transform: 'translateY(0)' },
 					'50%': { transform: 'translateY(-25%)' },
@@ -124,6 +129,7 @@ export default {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+				'pulse-star': 'pulse-star 1.5s ease-in-out infinite',
 				'float': 'float 5s ease-in-out infinite',
 				'wave': 'wave 2.5s infinite',
 			},

@@ -1,5 +1,5 @@
-
 import { Heart } from "lucide-react";
+import Logo from "@/components/ui/logo";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -8,11 +8,7 @@ const Footer = () => {
     <footer className="bg-impact-dark text-white">
       <div className="container mx-auto px-4 py-12">
         <div className="flex flex-col items-center mb-6">
-          <img 
-            src="/lovable-uploads/07dd1093-54e1-4bec-9228-a16d9058b83a.png"
-            alt="Impact Charitable Trust Logo"
-            className="h-10 w-auto mb-4"
-          />
+          <Logo className="h-10 w-auto mb-4" />
         </div>
         <p className="text-gray-300 mb-4 text-center">
           Empowering lives through education, healthcare, and compassion since 2018.

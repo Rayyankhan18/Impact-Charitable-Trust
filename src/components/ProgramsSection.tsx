@@ -32,6 +32,37 @@ const ProgramsSection = () => {
     return () => clearInterval(interval);
   }, []);
 
+  const programImages = {
+    education: [
+      "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80",
+      "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1169&q=80",
+      "https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=1169&q=80"
+    ],
+    healthcare: [
+      "https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      "https://images.unsplash.com/photo-1504439468489-c8920d796a29?auto=format&fit=crop&w=1170&q=80",
+      "https://images.unsplash.com/photo-1530026186672-2cd00ffc50fe?auto=format&fit=crop&w=1170&q=80"
+    ],
+    specialPrograms: [
+      "https://images.unsplash.com/photo-1593113598332-cd59a93f9724?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      "https://images.unsplash.com/photo-1527613426441-4da17471b66d?auto=format&fit=crop&w=1170&q=80",
+      "https://images.unsplash.com/photo-1615460549969-36fa19521a4f?auto=format&fit=crop&w=1170&q=80"
+    ]
+  };
+
+  const [imageIndex, setImageIndex] = useState({
+    education: 0,
+    healthcare: 0,
+    specialPrograms: 0
+  });
+
+  const cycleImages = (programType) => {
+    setImageIndex(prev => ({
+      ...prev,
+      [programType]: (prev[programType] + 1) % programImages[programType].length
+    }));
+  };
+
   const programs = [
     {
       id: 1,
@@ -42,11 +73,12 @@ const ProgramsSection = () => {
       description:
         "Free coaching classes for school dropouts and special training for Islamic scholars to become professionals. We help students pass exams through recognized boards.",
       link: "#education",
-      image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80",
+      image: programImages.education[imageIndex.education],
+      programType: "education",
       stats: {
-        students: "1,200+",
-        passRate: "95%",
-        scholarships: "250+"
+        students: "80+",
+        passRate: "100%",
+        scholarships: "80"
       }
     },
     {
@@ -58,27 +90,12 @@ const ProgramsSection = () => {
       description:
         "Free medical camps, mobile counseling centers, and awareness campaigns on HIV/AIDS, Hepatitis B, Malaria, Dengue, and Polio vaccination.",
       link: "#healthcare",
-      image: "https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      image: programImages.healthcare[imageIndex.healthcare],
+      programType: "healthcare",
       stats: {
-        patients: "5,000+",
-        camps: "120+",
-        vaccinations: "10,000+"
-      }
-    },
-    {
-      id: 3,
-      title: "Scholarships",
-      icon: <GraduationCap className="h-8 w-8 text-impact-yellow" />,
-      color: "bg-impact-yellow-light",
-      borderColor: "border-impact-yellow",
-      description:
-        "Financial assistance for deserving students covering tuition fees, examination fees, boarding and lodging, textbooks and study materials.",
-      link: "#scholarships",
-      image: "https://images.unsplash.com/photo-1627556704290-2b1f5853ff78?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-      stats: {
-        awarded: "500+",
-        investment: "₹2Cr+",
-        success: "85%"
+        patients: "1,200",
+        camps: "25+",
+        vaccinations: "250+"
       }
     },
     {
@@ -90,11 +107,12 @@ const ProgramsSection = () => {
       description:
         "Support for the elderly, widows, orphans, transgender individuals with vocational training, and other initiatives for economic empowerment.",
       link: "#special-programs",
-      image: "https://images.unsplash.com/photo-1593113598332-cd59a93f9724?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      image: programImages.specialPrograms[imageIndex.specialPrograms],
+      programType: "specialPrograms",
       stats: {
-        beneficiaries: "2,000+",
-        programs: "15+",
-        placement: "70%"
+        beneficiaries: "75+",
+        programs: "4+",
+        placement: "40%"
       }
     },
   ];
@@ -116,7 +134,7 @@ const ProgramsSection = () => {
             Transforming Lives Through Our Programs
           </h2>
           <p className="text-gray-600 text-lg">
-            We develop initiatives that create lasting change through education, healthcare, financial assistance, and special programs for vulnerable communities.
+            We develop initiatives that create lasting change through education, healthcare, and financial support for vulnerable communities.
           </p>
         </div>
 
@@ -145,6 +163,13 @@ const ProgramsSection = () => {
                       alt={program.title}
                       className="w-full h-full object-cover rounded-xl aspect-[4/3]"
                     />
+                    <button 
+                      onClick={() => cycleImages(program.programType)}
+                      className="absolute top-2 right-2 bg-white/70 hover:bg-white rounded-full p-1 text-xs"
+                      title="Next image"
+                    >
+                      ↻
+                    </button>
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent rounded-xl">
                       <div className="absolute bottom-0 left-0 p-8">
                         <h3 className="text-white text-2xl font-bold mb-2">{program.title}</h3>
@@ -203,14 +228,28 @@ const ProgramsSection = () => {
           </TabsContent>
 
           <TabsContent value="details" className="space-y-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {programs.map((program) => (
                 <Card key={program.id} className="overflow-hidden">
-                  <img
-                    src={program.image}
-                    alt={program.title}
-                    className="w-full h-48 object-cover"
-                  />
+                  <div className="relative">
+                    <img
+                      src={program.image}
+                      alt={program.title}
+                      className="w-full h-48 object-cover"
+                    />
+                    <div className="absolute bottom-0 right-0 p-2 flex gap-1">
+                      {programImages[program.programType].map((_, imgIndex) => (
+                        <button 
+                          key={imgIndex}
+                          className={`h-2 w-2 rounded-full ${imageIndex[program.programType] === imgIndex ? 'bg-white' : 'bg-white/40'}`}
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            setImageIndex(prev => ({...prev, [program.programType]: imgIndex}));
+                          }}
+                        />
+                      ))}
+                    </div>
+                  </div>
                   <CardContent className="p-6">
                     <div className="flex items-center gap-3 mb-4">
                       <div className={`p-2 rounded-full ${program.color}`}>
@@ -226,7 +265,7 @@ const ProgramsSection = () => {
           </TabsContent>
 
           <TabsContent value="impact" className="space-y-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {programs.map((program) => (
                 <Card key={program.id} className={`${program.color} border-t-4 ${program.borderColor}`}>
                   <CardContent className="p-6">

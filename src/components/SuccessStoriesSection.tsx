@@ -1,0 +1,116 @@
+
+import { useState } from 'react';
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import { Card, CardContent } from "@/components/ui/card";
+
+interface Story {
+  id: number;
+  name: string;
+  avatar: string;
+  role: string;
+  story: string;
+}
+
+const successStories: Story[] = [
+  {
+    id: 1,
+    name: "Priya Sharma",
+    avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+    role: "Medical Student",
+    story: "Through Impact's scholarship program, I was able to pursue my dream of becoming a doctor. Despite facing financial hardships, the trust supported my education and now I'm in my final year of medical school."
+  },
+  {
+    id: 2,
+    name: "Arjun Patel",
+    avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+    role: "Software Engineer",
+    story: "After dropping out of school, I joined Impact's vocational training program. They taught me coding skills and helped me secure an internship. Today, I work as a software engineer at a leading IT company."
+  },
+  {
+    id: 3,
+    name: "Fatima Khan",
+    avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+    role: "Entrepreneur",
+    story: "As a transgender woman, I faced discrimination everywhere. Impact's support program gave me vocational training in beauty services and a micro-loan to start my salon. Now I employ three other transgender individuals."
+  },
+  {
+    id: 4,
+    name: "Rajan Verma",
+    avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+    role: "Teacher",
+    story: "Impact Trust's educational program helped me complete my degree in education. I now teach mathematics at a local school and volunteer with Impact to help other students achieve their dreams."
+  },
+  {
+    id: 5,
+    name: "Sundari Venkat",
+    avatar: "https://images.unsplash.com/photo-1519699047748-de8e457a634e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+    role: "Healthcare Worker",
+    story: "After attending Impact's healthcare training program, I secured a position as a community health worker. I now help provide essential healthcare services in my village, improving lives every day."
+  },
+  {
+    id: 6,
+    name: "Vivek Singh",
+    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+    role: "Accountant",
+    story: "Impact Trust's scholarship program funded my accounting degree. They also provided mentorship and helped me secure an internship. Today, I work at a respected accounting firm in Mumbai."
+  },
+];
+
+const SuccessStoriesSection = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+  
+  return (
+    <section className="section-padding bg-gradient-to-br from-impact-green/5 via-white to-impact-blue/5">
+      <div className="container mx-auto px-4">
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <div className="inline-block bg-white/50 backdrop-blur-sm rounded-full px-4 py-1 text-impact-dark font-medium text-sm mb-4">
+            Stories of Transformation
+          </div>
+          <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-impact-green via-impact-blue to-impact-yellow bg-clip-text text-transparent">
+            Success Stories
+          </h2>
+          <p className="text-gray-600 text-lg">
+            Meet the individuals whose lives have been transformed through our programs and your support.
+          </p>
+        </div>
+        
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {successStories.map((story) => (
+              <Card key={story.id} className="overflow-hidden hover:shadow-lg transition-shadow">
+                <CardContent className="p-6">
+                  <div className="flex items-center mb-4">
+                    <Avatar className="h-12 w-12 border-2 border-impact-green">
+                      <AvatarImage src={story.avatar} alt={story.name} />
+                      <AvatarFallback>{story.name.charAt(0)}</AvatarFallback>
+                    </Avatar>
+                    <div className="ml-3">
+                      <h3 className="text-lg font-bold text-impact-dark">{story.name}</h3>
+                      <p className="text-sm text-gray-500">{story.role}</p>
+                    </div>
+                  </div>
+                  <blockquote className="text-gray-600 italic border-l-2 border-impact-green pl-4">
+                    "{story.story}"
+                  </blockquote>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+          
+          <div className="mt-12 text-center">
+            <p className="text-gray-600 mb-4">
+              These are just a few of the many lives we've touched. With your support, we can create many more success stories.
+            </p>
+            <p className="font-semibold text-impact-dark">
+              Students Educated: <span className="text-impact-green">230+</span> | 
+              Medical Camps: <span className="text-impact-blue">25+</span> | 
+              Scholarships: <span className="text-impact-yellow">80+</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default SuccessStoriesSection;
