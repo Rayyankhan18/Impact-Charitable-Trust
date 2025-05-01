@@ -58,7 +58,7 @@ const SpecialPrograms = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="p-5 border border-gray-100 rounded-lg hover:shadow-md transition-shadow">
               <img 
-                src="/lovable-uploads/60ac441e-67a8-47df-9891-ebf21ad51f62.png" 
+                src="/lovable-uploads/af1b7f73-358c-4af8-a8a7-bc021373937b.png" 
                 alt="Elderly Care" 
                 className="w-full h-32 object-cover rounded-md mb-3"
               />
@@ -69,7 +69,7 @@ const SpecialPrograms = () => {
             </div>
             <div className="p-5 border border-gray-100 rounded-lg hover:shadow-md transition-shadow">
               <img 
-                src="/lovable-uploads/4c13a227-f819-4983-aed5-0a9d1c75c00e.png" 
+                src="/lovable-uploads/a7f97e8d-4ed0-49e2-9bb2-8ae9a53e65e1.png" 
                 alt="Orphanage Support" 
                 className="w-full h-32 object-cover rounded-md mb-3"
               />
@@ -80,7 +80,7 @@ const SpecialPrograms = () => {
             </div>
             <div className="p-5 border border-gray-100 rounded-lg hover:shadow-md transition-shadow">
               <img 
-                src="/lovable-uploads/b4bc5ddf-7966-4377-9643-66963011d68c.png" 
+                src="/lovable-uploads/6e6bfaf8-7d4d-46b4-b020-5b34c7f335c0.png" 
                 alt="Disaster Relief" 
                 className="w-full h-32 object-cover rounded-md mb-3"
               />
