@@ -54,7 +54,7 @@ const Index = () => {
             <h2 className="text-3xl font-bold mb-12 text-impact-dark text-center">Special Programs</h2>
             <div className="flex flex-col md:flex-row items-center justify-center gap-10">
               <img
-                src="https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=600&q=80"
+                src="/lovable-uploads/566cb28c-b6fe-483d-a65e-8b64099e05b4.png"
                 alt="Special Programs"
                 className="rounded-lg shadow-lg max-w-md w-full object-cover h-[400px]"
               />

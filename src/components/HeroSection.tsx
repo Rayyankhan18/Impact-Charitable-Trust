@@ -1,6 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
+import { QrCode } from "lucide-react";
 import { 
   Carousel,
   CarouselContent,
@@ -11,6 +12,7 @@ import {
 
 const HeroSection = () => {
   const [mounted, setMounted] = useState(false);
+  const [showQrCode, setShowQrCode] = useState(false);
   
   useEffect(() => {
     setMounted(true);
@@ -82,24 +84,46 @@ const HeroSection = () => {
               Impact Charitable Trust works to uplift the educational and financial status of women and children, regardless of caste, creed, or religion.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Button className="bg-impact-green hover:bg-impact-green/90 text-lg px-8 py-6 shadow-lg hover:shadow-xl transition-all duration-300 animate-fade-in">
+              <Button 
+                className="bg-impact-green hover:bg-impact-green/90 text-lg px-8 py-6 shadow-lg hover:shadow-xl transition-all duration-300 animate-fade-in flex items-center gap-2"
+                onClick={() => setShowQrCode(!showQrCode)}
+              >
                 Donate Now
+                <QrCode className="h-5 w-5" />
               </Button>
-              <Button variant="outline" className="border-impact-green text-impact-green hover:bg-impact-green hover:text-white text-lg px-8 py-6 shadow-md hover:shadow-lg transition-all duration-300 animate-fade-in delay-100">
-                Our Programs
-              </Button>
+              <a href="#programs-section">
+                <Button 
+                  variant="outline" 
+                  className="border-impact-green text-impact-green hover:bg-impact-green hover:text-white text-lg px-8 py-6 shadow-md hover:shadow-lg transition-all duration-300 animate-fade-in delay-100"
+                >
+                  Our Programs
+                </Button>
+              </a>
             </div>
+            {showQrCode && (
+              <div className="mt-4 p-4 bg-white/90 backdrop-blur-sm rounded-lg shadow-lg animate-fade-in">
+                <div className="flex flex-col items-center">
+                  <p className="text-sm text-gray-600 mb-2">Scan to donate</p>
+                  <img 
+                    src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://impact-charitable-trust.org/donate" 
+                    alt="Donation QR Code" 
+                    className="h-32 w-32 object-contain"
+                  />
+                  <p className="text-xs text-gray-500 mt-2">Or visit our donation page</p>
+                </div>
+              </div>
+            )}
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <div className="bg-white/80 backdrop-blur-sm shadow-lg rounded-lg px-4 py-3 animate-fade-in delay-200 hover:scale-105 transition-transform duration-300">
                 <p className="text-2xl font-bold bg-gradient-to-r from-impact-green to-impact-blue bg-clip-text text-transparent">80G</p>
                 <p className="text-sm text-gray-600">Tax Benefits</p>
               </div>
               <div className="bg-white/80 backdrop-blur-sm shadow-lg rounded-lg px-4 py-3 animate-fade-in delay-300 hover:scale-105 transition-transform duration-300">
-                <p className="text-2xl font-bold bg-gradient-to-r from-impact-blue to-impact-yellow bg-clip-text text-transparent">10+</p>
+                <p className="text-2xl font-bold bg-gradient-to-r from-impact-blue to-impact-yellow bg-clip-text text-transparent">7+</p>
                 <p className="text-sm text-gray-600">Years of Impact</p>
               </div>
               <div className="bg-white/80 backdrop-blur-sm shadow-lg rounded-lg px-4 py-3 animate-fade-in delay-400 hover:scale-105 transition-transform duration-300">
-                <p className="text-2xl font-bold bg-gradient-to-r from-impact-yellow to-impact-green bg-clip-text text-transparent">1000+</p>
+                <p className="text-2xl font-bold bg-gradient-to-r from-impact-yellow to-impact-green bg-clip-text text-transparent">80+</p>
                 <p className="text-sm text-gray-600">Lives Changed</p>
               </div>
             </div>

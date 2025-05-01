@@ -3,18 +3,8 @@ import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { QrCode } from "lucide-react";
 
-const images = [
-  "https://images.unsplash.com/photo-1573497019236-61f684d1d9d1?auto=format&fit=crop&w=800&q=80",
-  "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80",
-  "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80",
-];
-
 const SpecialPrograms = () => {
-  const [idx, setIdx] = useState(0);
   const [showQrCode, setShowQrCode] = useState(false);
-  
-  const nextImage = () => setIdx((idx + 1) % images.length);
-  const prevImage = () => setIdx((idx - 1 + images.length) % images.length);
   
   return (
     <div className="w-full max-w-xl">
@@ -68,7 +58,7 @@ const SpecialPrograms = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="p-5 border border-gray-100 rounded-lg hover:shadow-md transition-shadow">
               <img 
-                src="https://images.unsplash.com/photo-1581579438747-104c53d7fcd4?auto=format&fit=crop&w=600&q=80" 
+                src="/lovable-uploads/c09542a4-5c96-4542-86c8-51ee245ce19f.png" 
                 alt="Elderly Care" 
                 className="w-full h-32 object-cover rounded-md mb-3"
               />
@@ -79,7 +69,7 @@ const SpecialPrograms = () => {
             </div>
             <div className="p-5 border border-gray-100 rounded-lg hover:shadow-md transition-shadow">
               <img 
-                src="https://images.unsplash.com/photo-1542810634-71277d95dcbb?auto=format&fit=crop&w=600&q=80" 
+                src="/lovable-uploads/94f06ad1-84e2-4098-a68b-1ed47d706f00.png" 
                 alt="Orphanage Support" 
                 className="w-full h-32 object-cover rounded-md mb-3"
               />
@@ -90,7 +80,7 @@ const SpecialPrograms = () => {
             </div>
             <div className="p-5 border border-gray-100 rounded-lg hover:shadow-md transition-shadow">
               <img 
-                src="https://images.unsplash.com/photo-1500595046743-cd271d694d30?auto=format&fit=crop&w=600&q=80" 
+                src="/lovable-uploads/ff4487b8-d9f4-4ceb-af4e-3ad74c3e1698.png" 
                 alt="Disaster Relief" 
                 className="w-full h-32 object-cover rounded-md mb-3"
               />

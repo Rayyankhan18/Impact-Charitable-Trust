@@ -36,17 +36,23 @@ const ProgramsSection = () => {
     education: [
       "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80",
       "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1169&q=80",
-      "https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=1169&q=80"
+      "https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=1169&q=80",
+      "https://images.unsplash.com/photo-1517486808906-6ca8b3f8e1c1?auto=format&fit=crop&w=1169&q=80",
+      "https://images.unsplash.com/photo-1546410531-bb4caa6b424d?auto=format&fit=crop&w=1169&q=80"
     ],
     healthcare: [
       "https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
       "https://images.unsplash.com/photo-1504439468489-c8920d796a29?auto=format&fit=crop&w=1170&q=80",
-      "https://images.unsplash.com/photo-1530026186672-2cd00ffc50fe?auto=format&fit=crop&w=1170&q=80"
+      "https://images.unsplash.com/photo-1530026186672-2cd00ffc50fe?auto=format&fit=crop&w=1170&q=80",
+      "https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?auto=format&fit=crop&w=1170&q=80",
+      "https://images.unsplash.com/photo-1612277795421-9bc7706a4a41?auto=format&fit=crop&w=1170&q=80"
     ],
     specialPrograms: [
       "https://images.unsplash.com/photo-1593113598332-cd59a93f9724?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
       "https://images.unsplash.com/photo-1527613426441-4da17471b66d?auto=format&fit=crop&w=1170&q=80",
-      "https://images.unsplash.com/photo-1615460549969-36fa19521a4f?auto=format&fit=crop&w=1170&q=80"
+      "https://images.unsplash.com/photo-1615460549969-36fa19521a4f?auto=format&fit=crop&w=1170&q=80",
+      "https://images.unsplash.com/photo-1609234500459-34302e58ad50?auto=format&fit=crop&w=1170&q=80",
+      "https://images.unsplash.com/photo-1542810634-71277d95dcbb?auto=format&fit=crop&w=1170&q=80"
     ]
   };
 
@@ -237,6 +243,11 @@ const ProgramsSection = () => {
                       alt={program.title}
                       className="w-full h-48 object-cover"
                     />
+                    <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/70 to-transparent">
+                      <div className="p-4 text-white">
+                        <h3 className="text-lg font-bold">{program.title}</h3>
+                      </div>
+                    </div>
                     <div className="absolute bottom-0 right-0 p-2 flex gap-1">
                       {programImages[program.programType].map((_, imgIndex) => (
                         <button 
@@ -257,7 +268,25 @@ const ProgramsSection = () => {
                       </div>
                       <h3 className="text-lg font-bold">{program.title}</h3>
                     </div>
-                    <p className="text-gray-600 text-sm">{program.description}</p>
+                    <p className="text-gray-600 text-sm mb-4">{program.description}</p>
+                    
+                    <div className="grid grid-cols-3 gap-2 mt-4">
+                      {programImages[program.programType].map((image, imgIdx) => (
+                        <div 
+                          key={imgIdx}
+                          className={`rounded-lg overflow-hidden border-2 cursor-pointer transition-all ${
+                            imageIndex[program.programType] === imgIdx ? 'border-impact-green scale-105' : 'border-transparent'
+                          }`}
+                          onClick={() => setImageIndex(prev => ({...prev, [program.programType]: imgIdx}))}
+                        >
+                          <img 
+                            src={image} 
+                            alt={`${program.title} image ${imgIdx + 1}`} 
+                            className="w-full h-16 object-cover"
+                          />
+                        </div>
+                      ))}
+                    </div>
                   </CardContent>
                 </Card>
               ))}

@@ -19,7 +19,7 @@ const Logo = ({ className, includeText = false }: LogoProps) => {
         <Star className="h-4 w-4 text-impact-yellow animate-pulse-star" fill="#FFF176" />
       </div>
       
-      <style jsx>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         @keyframes pulse-star {
           0% { opacity: 1; transform: scale(1); }
           50% { opacity: 0.6; transform: scale(0.8); }
@@ -28,7 +28,7 @@ const Logo = ({ className, includeText = false }: LogoProps) => {
         .animate-pulse-star {
           animation: pulse-star 1.5s ease-in-out infinite;
         }
-      `}</style>
+      `}} />
     </div>
   );
 };

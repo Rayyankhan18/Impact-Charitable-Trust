@@ -18,8 +18,8 @@ const ImpactSection = () => {
     {
       id: 1,
       icon: <User className="h-7 w-7 text-impact-green" />,
-      value: "5000+",
-      targetValue: 5000,
+      value: "100+",
+      targetValue: 100,
       countKey: "lives",
       label: "Lives Impacted",
       description: "Through our various programs and initiatives",
@@ -27,8 +27,8 @@ const ImpactSection = () => {
     {
       id: 2,
       icon: <BookOpen className="h-7 w-7 text-impact-blue" />,
-      value: "2500+",
-      targetValue: 2500,
+      value: "230+",
+      targetValue: 230,
       countKey: "students",
       label: "Students Educated",
       description: "With free coaching and educational support",
@@ -36,8 +36,8 @@ const ImpactSection = () => {
     {
       id: 3,
       icon: <HeartPulse className="h-7 w-7 text-impact-yellow" />,
-      value: "1000+",
-      targetValue: 1000,
+      value: "25+",
+      targetValue: 25,
       countKey: "camps",
       label: "Medical Camps",
       description: "Providing free healthcare services to communities",
@@ -45,8 +45,8 @@ const ImpactSection = () => {
     {
       id: 4,
       icon: <GraduationCap className="h-7 w-7 text-impact-green" />,
-      value: "500+",
-      targetValue: 500,
+      value: "80+",
+      targetValue: 80,
       countKey: "scholarships",
       label: "Scholarships",
       description: "Awarded to deserving students for higher education",
@@ -123,10 +123,10 @@ const ImpactSection = () => {
         const progress = step / steps;
         
         setCounts({
-          lives: Math.floor(progress * 5000),
-          students: Math.floor(progress * 2500),
-          camps: Math.floor(progress * 1000),
-          scholarships: Math.floor(progress * 500),
+          lives: Math.floor(progress * 100),
+          students: Math.floor(progress * 230),
+          camps: Math.floor(progress * 25),
+          scholarships: Math.floor(progress * 80),
         });
       }, interval);
       
@@ -216,29 +216,6 @@ const ImpactSection = () => {
                 <CarouselNext className="static transform-none mx-2" />
               </div>
             </Carousel>
-          </div>
-        </div>
-
-        {/* Partner Logos */}
-        <div className="text-center bg-white/50 backdrop-blur-sm rounded-xl p-8 shadow-md">
-          <h3 className="text-xl font-bold text-impact-dark mb-6">Our Partners & Supporters</h3>
-          <div className="flex flex-wrap justify-center items-center gap-8">
-            {/* These would be replaced with actual partner logos */}
-            <div className="bg-white w-32 h-16 rounded-lg shadow-sm flex items-center justify-center hover:shadow-md transition-shadow">
-              <div className="text-gray-600 font-medium">Partner 1</div>
-            </div>
-            <div className="bg-white w-32 h-16 rounded-lg shadow-sm flex items-center justify-center hover:shadow-md transition-shadow">
-              <div className="text-gray-600 font-medium">Partner 2</div>
-            </div>
-            <div className="bg-white w-32 h-16 rounded-lg shadow-sm flex items-center justify-center hover:shadow-md transition-shadow">
-              <div className="text-gray-600 font-medium">Partner 3</div>
-            </div>
-            <div className="bg-white w-32 h-16 rounded-lg shadow-sm flex items-center justify-center hover:shadow-md transition-shadow">
-              <div className="text-gray-600 font-medium">Partner 4</div>
-            </div>
-            <div className="bg-white w-32 h-16 rounded-lg shadow-sm flex items-center justify-center hover:shadow-md transition-shadow">
-              <div className="text-gray-600 font-medium">Partner 5</div>
-            </div>
           </div>
         </div>
       </div>
