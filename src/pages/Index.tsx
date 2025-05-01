@@ -8,7 +8,6 @@ import ImpactSection from "@/components/ImpactSection";
 import SpecialPrograms from "@/components/SpecialPrograms";
 import DonateSection from "@/components/DonateSection";
 import ContactSection from "@/components/ContactSection";
-import CallToAction from "@/components/CallToAction";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
 import FounderSection from "@/components/FounderSection";
@@ -65,7 +64,6 @@ const Index = () => {
         <ImpactSection />
         <DonateSection />
         <DonationVolunteerSection />
-        <CallToAction />
         <ContactSection />
       </main>
       <Footer />

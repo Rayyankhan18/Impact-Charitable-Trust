@@ -13,7 +13,7 @@ const DonationVolunteerSection = () => {
         <Button 
           className="bg-impact-green hover:bg-impact-green/90 text-white flex-1 py-4 text-xl font-semibold rounded-lg shadow-lg transition-colors flex items-center justify-center gap-2"
           onClick={() => {
-            setShowQrCode(!showQrCode);
+            setShowQrCode(true);
             setShowVolunteerForm(false);
           }}
         >
@@ -22,7 +22,7 @@ const DonationVolunteerSection = () => {
         <Button 
           className="bg-impact-green hover:bg-impact-green/90 text-white flex-1 py-4 text-xl font-semibold rounded-lg shadow-lg transition-colors"
           onClick={() => {
-            setShowVolunteerForm(!showVolunteerForm);
+            setShowVolunteerForm(true);
             setShowQrCode(false);
           }}
         >
