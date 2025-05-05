@@ -7,10 +7,12 @@ const SpecialPrograms = () => {
   const [showQrCode, setShowQrCode] = useState(false);
   
   return (
-    <div className="w-full max-w-xl">
+    <section className="w-full max-w-4xl mx-auto my-16 p-8 rounded-3xl shadow-xl bg-gradient-to-br from-impact-green/10 via-impact-blue/5 to-impact-yellow/10">
+      <div className="w-full max-w-xl mx-auto">
       <div className="bg-white rounded-xl shadow-md overflow-hidden">
         <div className="p-8">
-          <h3 className="text-2xl font-bold text-impact-dark mb-4">Transgender Support Initiative</h3>
+          <h2 className="text-3xl font-extrabold mb-8 text-center bg-gradient-to-r from-impact-green via-impact-blue to-impact-yellow bg-clip-text text-transparent animate-gradient-x drop-shadow-lg">Special Programs</h2>
+<h3 className="text-2xl font-bold text-impact-dark mb-4">Transgender Support Initiative</h3>
           <p className="text-gray-600 mb-4">
             Transgender individuals often face social stigma and are pushed into begging, theft, or exploitation. Through our dedicated program, we aim to empower this marginalized community by providing:
           </p>
@@ -93,6 +95,7 @@ const SpecialPrograms = () => {
         </div>
       </div>
     </div>
+    </section>
   );
 };
 

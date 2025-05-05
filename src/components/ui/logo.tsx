@@ -18,7 +18,6 @@ const Logo = ({ className, includeText = false }: LogoProps) => {
       <div className="absolute top-0 right-0 transform -translate-y-1/4 translate-x-1/4">
         <Star className="h-4 w-4 text-impact-yellow animate-pulse-star" fill="#FFF176" />
       </div>
-      
       <style dangerouslySetInnerHTML={{ __html: `
         @keyframes pulse-star {
           0% { opacity: 1; transform: scale(1); }

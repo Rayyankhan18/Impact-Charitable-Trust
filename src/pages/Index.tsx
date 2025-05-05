@@ -1,19 +1,21 @@
 
 import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
+import CallToAction from "@/components/CallToAction";
+import SpecialPrograms from "@/components/SpecialPrograms";
 import HeroSection from "@/components/HeroSection";
 import ProgramsSection from "@/components/ProgramsSection";
 import AboutSection from "@/components/AboutSection";
 import ImpactSection from "@/components/ImpactSection";
-import SpecialPrograms from "@/components/SpecialPrograms";
 import DonateSection from "@/components/DonateSection";
 import ContactSection from "@/components/ContactSection";
+import GallerySection from "@/components/GallerySection";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
 import FounderSection from "@/components/FounderSection";
 import DonationVolunteerSection from "@/components/DonationVolunteerSection";
 import SuccessStoriesSection from "@/components/SuccessStoriesSection";
-import DirectorsSection from "@/components/DirectorsSection";
+
 
 const Index = () => {
   useEffect(() => {
@@ -39,7 +41,7 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-gradient-to-br from-impact-green/10 via-impact-blue/5 to-impact-yellow/10 backdrop-blur-sm">
       <Navbar />
       <main>
         <HeroSection />
@@ -47,24 +49,13 @@ const Index = () => {
         <ProgramsSection />
         <SuccessStoriesSection />
         <FounderSection />
-        <DirectorsSection />
-        <div className="bg-gradient-to-br from-white via-impact-green/5 to-impact-blue/5">
-          <section className="container mx-auto px-4 py-20" id="special-programs">
-            <h2 className="text-3xl font-bold mb-12 text-impact-dark text-center">Special Programs</h2>
-            <div className="flex flex-col md:flex-row items-center justify-center gap-10">
-              <img
-                src="/lovable-uploads/566cb28c-b6fe-483d-a65e-8b64099e05b4.png"
-                alt="Special Programs"
-                className="rounded-lg shadow-lg max-w-md w-full object-cover h-[400px]"
-              />
-              <SpecialPrograms />
-            </div>
-          </section>
-        </div>
+        <SpecialPrograms />
         <ImpactSection />
         <DonateSection />
         <DonationVolunteerSection />
         <ContactSection />
+        <GallerySection />
+        <CallToAction />
       </main>
       <Footer />
       <ScrollToTop />

@@ -1,18 +1,33 @@
 
 import { Button } from "@/components/ui/button";
+import { useState, useEffect } from "react";
+
+const carouselImages = [
+  { src: "/Photos/Picture32.jpg", alt: "Vision 1" },
+  { src: "/Photos/Picture39.jpg", alt: "Vision 2" },
+  { src: "/Photos/Picture43.jpg", alt: "Vision 3" },
+];
 
 const AboutSection = () => {
+  const [currentImage, setCurrentImage] = useState(0);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImage((prev) => (prev + 1) % carouselImages.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
   return (
     <section id="about" className="section-padding bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="order-2 lg:order-1">
             <div className="relative">
-              <div className="rounded-xl overflow-hidden shadow-xl">
+              <div className="rounded-2xl overflow-hidden shadow-2xl flex justify-center items-center h-72 md:h-96 w-full">
                 <img
-                  src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1631&q=80"
-                  alt="Impact Charitable Trust volunteers"
-                  className="w-full h-auto object-cover"
+                  src={carouselImages[currentImage].src}
+                  alt={carouselImages[currentImage].alt}
+                  className="w-full h-full object-cover rounded-2xl shadow-lg transition-all duration-700"
+                  key={carouselImages[currentImage].src}
                 />
               </div>
               <div className="absolute -bottom-6 -right-6 bg-white p-4 rounded-lg shadow-lg">
@@ -21,7 +36,6 @@ const AboutSection = () => {
               </div>
             </div>
           </div>
-          
           <div className="order-1 lg:order-2">
             <div className="inline-block bg-impact-green/10 rounded-full px-4 py-1 text-impact-green font-medium text-sm mb-4">
               About Us
@@ -33,7 +47,6 @@ const AboutSection = () => {
             <p className="text-gray-600 mb-6">
               Our mission is to set up and manage educational institutions, hospitals, technical and training centers, commercial institutes, and computer learning centers to support the backward classes and minority communities without any discrimination.
             </p>
-            
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
               <div className="bg-white p-4 rounded-lg shadow-sm">
                 <h3 className="text-impact-green font-bold text-lg mb-2">Our Vision</h3>
@@ -48,7 +61,6 @@ const AboutSection = () => {
                 </p>
               </div>
             </div>
-            
             <Button className="bg-impact-green hover:bg-impact-green/90">
               Learn More About Us
             </Button>

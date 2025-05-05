@@ -41,7 +41,7 @@ const HeroSection = () => {
   }, []);
   
   const heroImages = [
-    "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    "/Photos/Picture38.jpg",
     "https://images.unsplash.com/photo-1524069290683-0457abfe42c3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
     "https://images.unsplash.com/photo-1542810634-71277d95dcbb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
   ];
@@ -84,13 +84,9 @@ const HeroSection = () => {
               Impact Charitable Trust works to uplift the educational and financial status of women and children, regardless of caste, creed, or religion.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Button 
-                className="bg-impact-green hover:bg-impact-green/90 text-lg px-8 py-6 shadow-lg hover:shadow-xl transition-all duration-300 animate-fade-in flex items-center gap-2"
-                onClick={() => setShowQrCode(!showQrCode)}
-              >
-                Donate Now
-                <QrCode className="h-5 w-5" />
-              </Button>
+              <a href="/#donate" tabIndex={0} className="bg-impact-green hover:bg-impact-green/90 text-white text-lg px-8 py-6 rounded shadow-lg hover:shadow-xl transition-all duration-300 animate-fade-in flex items-center gap-2 font-semibold focus:outline-none focus:ring-2 focus:ring-impact-green">
+                Donate Now <QrCode className="h-5 w-5" />
+              </a>
               <a href="#programs-section">
                 <Button 
                   variant="outline" 

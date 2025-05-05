@@ -20,6 +20,7 @@ const Navbar = () => {
     { name: "About", path: "/#about" },
     { name: "Programs", path: "/#programs" },
     { name: "Impact", path: "/#impact" },
+    { name: "Gallery", path: "/#gallery" },
     { name: "Contact", path: "/#contact" },
   ];
 
@@ -48,7 +49,7 @@ const Navbar = () => {
               {link.name}
             </a>
           ))}
-          <Button className="bg-impact-green hover:bg-impact-green/90">Donate Now</Button>
+          <a href="/#donate" className="bg-impact-green hover:bg-impact-green/90 text-white font-medium px-4 py-2 rounded transition-colors">Donate Now</a>
         </nav>
 
         <button

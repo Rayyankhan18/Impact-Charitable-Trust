@@ -9,7 +9,6 @@ const Footer = () => {
     <footer className="bg-impact-dark text-white">
       <div className="container mx-auto px-4 py-12">
         <div className="flex flex-col items-center mb-8">
-          <Logo className="h-16 w-auto mb-4" /> {/* Smaller logo */}
           <p className="text-gray-300 mb-2 text-center">
             Empowering lives through education, healthcare, and compassion since 2018.
           </p>

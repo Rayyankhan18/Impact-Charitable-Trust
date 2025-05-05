@@ -8,7 +8,7 @@ const DonationVolunteerSection = () => {
   const [showVolunteerForm, setShowVolunteerForm] = useState(false);
   
   return (
-    <section className="container mx-auto px-4 py-12 space-y-8" aria-label="Donate and Volunteer">
+    <section id="donate" className="container mx-auto px-4 py-12 space-y-8" aria-label="Donate and Volunteer">
       <div className="flex flex-col md:flex-row justify-center gap-8 max-w-xl mx-auto">
         <Button 
           className="bg-impact-green hover:bg-impact-green/90 text-white flex-1 py-4 text-xl font-semibold rounded-lg shadow-lg transition-colors flex items-center justify-center gap-2"
@@ -19,29 +19,29 @@ const DonationVolunteerSection = () => {
         >
           Donate Now <QrCode className="h-5 w-5" />
         </Button>
-        <Button 
-          className="bg-impact-green hover:bg-impact-green/90 text-white flex-1 py-4 text-xl font-semibold rounded-lg shadow-lg transition-colors"
-          onClick={() => {
-            setShowVolunteerForm(true);
-            setShowQrCode(false);
-          }}
+        <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLSdf3CWT_OSfk9KgGTqeIssBGdq3HG8vKwbQmd5KgyfPL5I3tQ/viewform"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-impact-green hover:bg-impact-green/90 text-white flex-1 py-4 text-xl font-semibold rounded-lg shadow-lg transition-colors flex items-center justify-center text-center"
+          style={{ display: 'flex' }}
         >
           Become a Volunteer
-        </Button>
+        </a>
       </div>
       
       {showQrCode && (
         <div className="max-w-md mx-auto mt-8 p-6 bg-white rounded-xl shadow-lg">
-          <h3 className="text-xl font-bold mb-4 text-center">Scan to Donate</h3>
+          <h3 className="text-xl font-bold mb-4 text-center">Donate Now</h3>
           <div className="flex justify-center">
             <img 
-              src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://impact-charitable-trust.org/donate" 
-              alt="Donation QR Code" 
-              className="w-48 h-48 object-contain"
+              src="/Photos/WhatsApp Image 2025-05-02 at 3.59.06 PM.jpeg" 
+              alt="Donate Now Details" 
+              className="w-full max-h-96 object-contain rounded-lg shadow"
             />
           </div>
           <p className="text-center text-gray-600 mt-4">
-            Scan this QR code with your phone's camera to make a secure donation
+            Use the details in the image to make your donation. Thank you for your support!
           </p>
         </div>
       )}
