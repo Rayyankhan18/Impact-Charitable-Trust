@@ -1,6 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
+import { ReactTyped } from 'react-typed';
 import { QrCode } from "lucide-react";
 
 const SpecialPrograms = () => {
@@ -11,8 +12,19 @@ const SpecialPrograms = () => {
       <div className="w-full max-w-xl mx-auto">
       <div className="bg-white rounded-xl shadow-md overflow-hidden">
         <div className="p-8">
-          <h2 className="text-3xl font-extrabold mb-8 text-center bg-gradient-to-r from-impact-green via-impact-blue to-impact-yellow bg-clip-text text-transparent animate-gradient-x drop-shadow-lg">Special Programs</h2>
-<h3 className="text-2xl font-bold text-impact-dark mb-4">Transgender Support Initiative</h3>
+          <h2
+            className="text-3xl font-extrabold mb-8 text-center bg-gradient-to-r from-impact-green via-impact-blue to-impact-yellow bg-clip-text text-transparent animate-gradient-x drop-shadow-lg"
+            style={{ whiteSpace: 'nowrap', overflow: 'hidden', minWidth: 0, display: 'inline-block' }}
+          >
+            <ReactTyped
+              strings={["Special Programs"]}
+              typeSpeed={60}
+              backSpeed={40}
+              loop
+              showCursor={false}
+            />
+          </h2>
+          <h3 className="text-2xl font-bold text-impact-dark mb-4">Transgender Support Initiative</h3>
           <p className="text-gray-600 mb-4">
             Transgender individuals often face social stigma and are pushed into begging, theft, or exploitation. Through our dedicated program, we aim to empower this marginalized community by providing:
           </p>
@@ -34,13 +46,12 @@ const SpecialPrograms = () => {
               <span className="text-gray-600">Advocacy for equal rights as per the Indian Constitution</span>
             </li>
           </ul>
-          <Button 
-            className="bg-impact-green hover:bg-impact-green/90 w-full flex items-center justify-center gap-2"
-            onClick={() => setShowQrCode(!showQrCode)}
+          <a
+            href="#donate"
+            className="bg-impact-green hover:bg-impact-green/90 w-full flex items-center justify-center gap-2 py-3 px-4 rounded-md text-white font-semibold text-base text-center transition-colors duration-200"
           >
-            {showQrCode ? "Hide QR Code" : "Support This Initiative"} 
-            {showQrCode && <QrCode className="h-4 w-4" />}
-          </Button>
+            Support This Initiative
+          </a>
           
           {showQrCode && (
             <div className="mt-4 p-4 bg-gray-50 rounded-lg flex flex-col items-center">
@@ -58,35 +69,35 @@ const SpecialPrograms = () => {
         <div className="bg-white p-8 mt-8 rounded-xl shadow-md">
           <h3 className="text-2xl font-bold text-impact-dark mb-6 text-center">Other Special Programs</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="p-5 border border-gray-100 rounded-lg hover:shadow-md transition-shadow">
+            <div className="p-6 border border-gray-100 rounded-lg hover:shadow-md transition-shadow">
               <img 
-                src="/lovable-uploads/af1b7f73-358c-4af8-a8a7-bc021373937b.png" 
+                src="/Photos/Picture14.jpg" 
                 alt="Elderly Care" 
-                className="w-full h-32 object-cover rounded-md mb-3"
+                className="w-full h-40 object-contain rounded-md mb-4"
               />
-              <h4 className="font-bold text-impact-blue mb-2">Elderly Care</h4>
+              <h4 className="font-bold text-impact-blue text-lg mb-2">Elderly Care</h4>
               <p className="text-gray-600 text-sm">
                 Establishing homes for the elderly with comprehensive care, activities, and community engagement.
               </p>
             </div>
-            <div className="p-5 border border-gray-100 rounded-lg hover:shadow-md transition-shadow">
+            <div className="p-6 border border-gray-100 rounded-lg hover:shadow-md transition-shadow">
               <img 
-                src="/lovable-uploads/a7f97e8d-4ed0-49e2-9bb2-8ae9a53e65e1.png" 
+                src="/Photos/Picture80.jpg" 
                 alt="Orphanage Support" 
-                className="w-full h-32 object-cover rounded-md mb-3"
+                className="w-full h-40 object-contain rounded-md mb-4"
               />
-              <h4 className="font-bold text-impact-green mb-2">Orphanage Support</h4>
+              <h4 className="font-bold text-impact-green text-lg mb-2">Orphanage Support</h4>
               <p className="text-gray-600 text-sm">
                 Running orphanages for boys and girls with free boarding and daycare.
               </p>
             </div>
-            <div className="p-5 border border-gray-100 rounded-lg hover:shadow-md transition-shadow">
+            <div className="p-6 border border-gray-100 rounded-lg hover:shadow-md transition-shadow">
               <img 
-                src="/lovable-uploads/6e6bfaf8-7d4d-46b4-b020-5b34c7f335c0.png" 
+                src="/Photos/WhatsApp%20Image%202025-05-02%20at%204.20.46%20PM%20(1).jpeg" 
                 alt="Disaster Relief" 
-                className="w-full h-32 object-cover rounded-md mb-3"
+                className="w-full h-40 object-contain rounded-md mb-4"
               />
-              <h4 className="font-bold text-amber-600 mb-2">Disaster Relief</h4>
+              <h4 className="font-bold text-amber-600 text-lg mb-2">Disaster Relief</h4>
               <p className="text-gray-600 text-sm">
                 Providing relief and rehabilitation for individuals displaced by disasters.
               </p>

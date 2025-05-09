@@ -2,7 +2,8 @@ import { Book, Heart, Award } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { ReactTyped } from 'react-typed';
 
 export default function ProgramsSection() {
   // The section below is now anchorable via #programs
@@ -21,7 +22,7 @@ export default function ProgramsSection() {
       description:
         "Free coaching classes for school dropouts and special training for Islamic scholars to become professionals. We help students pass exams through recognized boards.",
       link: "#education",
-      image: "/images/Picture40.jpg",
+      image: "/Photos/Picture39.jpg",
       stats: {
         students: "80+",
         passRate: "100%"
@@ -36,7 +37,7 @@ export default function ProgramsSection() {
       description:
         "Free medical camps, mobile counseling centers, and awareness campaigns on HIV/AIDS, Hepatitis B, Malaria, Dengue, and Polio vaccination.",
       link: "#healthcare",
-      image: "/images/Picture15.jpg",
+      image: "/Photos/Picture78.jpg",
       stats: {
         patients: "1200",
         camps: "25+",
@@ -52,7 +53,7 @@ export default function ProgramsSection() {
       description:
         "Support for the elderly, widows, orphans, transgender individuals with vocational training, and other initiatives for economic empowerment.",
       link: "#special-programs",
-      image: "/images/Picture22.jpg",
+      image: "/Photos/Picture71.jpg",
       stats: {
         beneficiaries: "75+",
         programs: "4+",
@@ -72,38 +73,28 @@ export default function ProgramsSection() {
     <div id="programs-section" className="section-padding bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold mb-4 text-impact-green">
-            Transforming Lives Through Our Programs
-          </h2>
+          <h2
+  className="text-4xl font-bold mb-4 bg-gradient-to-r from-impact-green via-impact-blue to-impact-yellow bg-clip-text text-transparent"
+  style={{ whiteSpace: 'nowrap', overflow: 'hidden', minWidth: 0, display: 'inline-block' }}
+>
+  <ReactTyped
+    strings={["Transforming Lives Through Our Programs"]}
+    typeSpeed={60}
+    backSpeed={40}
+    loop
+    showCursor={false}
+  />
+</h2>
           <p className="text-gray-600 text-lg max-w-3xl mx-auto">
             We develop initiatives that create lasting change through education, healthcare, and financial support for vulnerable communities.
           </p>
         </div>
 
-        <Tabs defaultValue="overview" className="w-full">
+        <Tabs defaultValue="details" className="w-full">
           <TabsList className="w-full justify-center mb-8 gap-2 bg-gray-100 rounded-lg p-2">
-            <TabsTrigger value="overview">Overview</TabsTrigger>
             <TabsTrigger value="details">Program Details</TabsTrigger>
             <TabsTrigger value="impact">Impact & Stats</TabsTrigger>
           </TabsList>
-
-          <TabsContent value="overview" className="space-y-8">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {programs.map((program, index) => (
-                <Card
-                  key={program.id}
-                  className={`transition-all duration-300 cursor-pointer overflow-hidden bg-white border border-gray-100 hover:shadow-sm ${activeIndex === index ? 'ring-2 ring-impact-green/50' : ''}`}
-                  onClick={() => setActiveIndex(index)}
-                >
-                  <CardContent className="p-8 flex flex-col items-center text-center">
-                    <div className="mb-4">{program.icon}</div>
-                    <h3 className="text-xl font-semibold mb-2 text-impact-dark">{program.title}</h3>
-                    <p className="text-gray-600 text-base mb-4">{program.description}</p>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </TabsContent>
 
           <TabsContent value="details">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
@@ -160,11 +151,12 @@ export default function ProgramsSection() {
           <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
             Our programs are designed to create sustainable impact. We believe in empowering communities through education, healthcare, and financial support.
           </p>
-          <Button 
-            className="bg-gradient-to-r from-impact-green to-impact-blue text-white font-medium px-8 py-3 shadow-lg hover:shadow-xl transition-all duration-300"
+          <a
+            href="#donate"
+            className="bg-impact-green hover:bg-impact-green/90 text-white px-8 py-4 rounded-lg shadow-lg text-lg font-semibold transition-colors inline-block text-center"
           >
             Support Our Work
-          </Button>
+          </a>
         </div>
       </div>
     </div>

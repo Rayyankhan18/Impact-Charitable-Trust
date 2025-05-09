@@ -13,7 +13,7 @@ import GallerySection from "@/components/GallerySection";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
 import FounderSection from "@/components/FounderSection";
-import DonationVolunteerSection from "@/components/DonationVolunteerSection";
+
 import SuccessStoriesSection from "@/components/SuccessStoriesSection";
 
 
@@ -52,7 +52,6 @@ const Index = () => {
         <SpecialPrograms />
         <ImpactSection />
         <DonateSection />
-        <DonationVolunteerSection />
         <ContactSection />
         <GallerySection />
         <CallToAction />

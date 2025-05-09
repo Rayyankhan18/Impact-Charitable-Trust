@@ -1,6 +1,6 @@
-
 import { useState } from 'react';
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import { ReactTyped } from 'react-typed';
 import { Card, CardContent } from "@/components/ui/card";
 
 interface Story {
@@ -63,12 +63,23 @@ const SuccessStoriesSection = () => {
     <section className="section-padding bg-gradient-to-br from-impact-green/5 via-white to-impact-blue/5">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-block bg-white/50 backdrop-blur-sm rounded-full px-4 py-1 text-impact-dark font-medium text-sm mb-4">
-            Stories of Transformation
-          </div>
-          <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-impact-green via-impact-blue to-impact-yellow bg-clip-text text-transparent">
-            Success Stories
-          </h2>
+          <h2
+  className="text-3xl md:text-4xl font-bold mb-2 md:mb-3 bg-gradient-to-r from-impact-green via-impact-blue to-impact-yellow bg-clip-text text-transparent"
+  style={{ whiteSpace: 'normal', minWidth: 0, display: 'inline-block' }}
+>
+  <ReactTyped
+    strings={["Success Stories"]}
+    typeSpeed={60}
+    backSpeed={40}
+    loop
+    showCursor={false}
+  />
+</h2>
+<div className="block w-full">
+  <span className="inline-block bg-white/50 backdrop-blur-sm rounded-full px-3 py-1 text-impact-dark font-medium text-xs md:text-sm mb-2 mt-1">
+    Stories of Transformation
+  </span>
+</div>
           <p className="text-gray-600 text-lg">
             Meet the individuals whose lives have been transformed through our programs and your support.
           </p>
@@ -109,6 +120,7 @@ const SuccessStoriesSection = () => {
           </div>
         </div>
       </div>
+
     </section>
   );
 };

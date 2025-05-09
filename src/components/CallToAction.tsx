@@ -28,12 +28,22 @@ const CallToAction = () => {
             Impact Charitable Trust believes that every child deserves a fair chance—especially the most deprived. We are committed to delivering change through education, healthcare, and financial empowerment.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="bg-impact-green hover:bg-impact-green/90 text-white text-lg px-8 py-6 shadow-xl hover:shadow-2xl transform transition-all duration-300 hover:-translate-y-1">
-              <a href="/#donate" className="bg-impact-green hover:bg-impact-green/90 text-white font-semibold px-6 py-3 rounded shadow transition-colors">Donate Now</a>
-            </Button>
-            <Button className="bg-impact-green hover:bg-impact-green/90 text-white text-lg px-8 py-6 shadow-xl hover:shadow-2xl transform transition-all duration-300 hover:-translate-y-1">
+            <a
+              href="#donate"
+              className="bg-impact-green hover:bg-impact-green/90 text-white text-lg px-8 py-6 rounded shadow-xl hover:shadow-2xl font-semibold transition-all duration-300 hover:-translate-y-1 flex items-center justify-center"
+              style={{ minWidth: '210px', textAlign: 'center' }}
+            >
+              Donate Now
+            </a>
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSdf3CWT_OSfk9KgGTqeIssBGdq3HG8vKwbQmd5KgyfPL5I3tQ/viewform"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-impact-green hover:bg-impact-green/90 text-white text-lg px-8 py-6 rounded shadow-xl hover:shadow-2xl font-semibold transition-all duration-300 hover:-translate-y-1 flex items-center justify-center"
+              style={{ minWidth: '210px', textAlign: 'center' }}
+            >
               Become a Volunteer
-            </Button>
+            </a>
           </div>
         </div>
       </div>

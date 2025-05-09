@@ -22,16 +22,16 @@ const Footer = () => {
             <h4 className="text-lg font-bold mb-4 text-white">Quick Links</h4>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="text-gray-300 hover:text-impact-green transition-colors">Home</a>
+                <a href="/" className="text-gray-300 hover:text-impact-green transition-colors">Home</a>
               </li>
               <li>
                 <a href="#about" className="text-gray-300 hover:text-impact-green transition-colors">About Us</a>
               </li>
               <li>
-                <a href="#programs" className="text-gray-300 hover:text-impact-green transition-colors">Our Programs</a>
+                <a href="#programs-section" className="text-gray-300 hover:text-impact-green transition-colors">Our Programs</a>
               </li>
               <li>
-                <a href="#impact" className="text-gray-300 hover:text-impact-green transition-colors">Our Impact</a>
+                <a href="#impact-section" className="text-gray-300 hover:text-impact-green transition-colors">Our Impact</a>
               </li>
               <li>
                 <a href="#contact" className="text-gray-300 hover:text-impact-green transition-colors">Contact</a>
@@ -55,7 +55,7 @@ const Footer = () => {
                 <a href="#special-programs" className="text-gray-300 hover:text-impact-green transition-colors">Special Programs</a>
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:text-impact-green transition-colors">Transgender Support</a>
+                <a href="#special-programs" className="text-gray-300 hover:text-impact-green transition-colors">Transgender Support</a>
               </li>
             </ul>
           </div>
@@ -64,19 +64,19 @@ const Footer = () => {
             <h4 className="text-lg font-bold mb-4 text-white">Get Involved</h4>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="text-gray-300 hover:text-impact-green transition-colors">Donate</a>
+                <a href="#donate" className="text-gray-300 hover:text-impact-green transition-colors">Donate</a>
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:text-impact-green transition-colors">Volunteer</a>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSdf3CWT_OSfk9KgGTqeIssBGdq3HG8vKwbQmd5KgyfPL5I3tQ/viewform" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-impact-green transition-colors">Volunteer</a>
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:text-impact-green transition-colors">Partner With Us</a>
+                <a href="#partner" className="text-gray-300 hover:text-impact-green transition-colors">Partner With Us</a>
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:text-impact-green transition-colors">Corporate Giving</a>
+                <a href="#corporate" className="text-gray-300 hover:text-impact-green transition-colors">Corporate Giving</a>
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:text-impact-green transition-colors">Support 80G</a>
+                <a href="#donate" className="text-gray-300 hover:text-impact-green transition-colors">Support 80G</a>
               </li>
             </ul>
           </div>

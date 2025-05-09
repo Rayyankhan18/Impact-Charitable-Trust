@@ -1,5 +1,6 @@
 
 import { Button } from "@/components/ui/button";
+import { ReactTyped } from 'react-typed';
 import { useEffect, useState } from "react";
 import { QrCode } from "lucide-react";
 import { 
@@ -67,33 +68,43 @@ const HeroSection = () => {
         </div>
       </div>
       
-      <div className="container mx-auto px-4 py-16 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="max-w-2xl">
-            <div className="mb-2 inline-flex items-center px-3 py-1 bg-white/30 backdrop-blur-sm rounded-full text-impact-dark text-sm font-medium">
+      <div className="container mx-auto px-2 py-8 md:py-10 relative z-10 w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 items-center">
+          <div className="w-full sm:max-w-2xl">
+            <div className="mb-1 inline-flex items-center px-2 py-1 bg-white/30 backdrop-blur-sm rounded-full text-impact-dark text-xs md:text-sm font-medium">
               <span className="animate-pulse mr-2 h-2 w-2 rounded-full bg-impact-green"></span>
               Transforming Lives Since 2018
             </div>
-            <h1 className="mb-6">
-              <span className="text-impact-dark block">Empowering Lives Through</span>
-              <span className="bg-gradient-to-r from-impact-green via-impact-blue to-impact-yellow bg-clip-text text-transparent">
-                Education & Compassion
+            <h1 className="mb-4 md:mb-5">
+              <span
+                className="block bg-gradient-to-r from-impact-green via-impact-blue to-impact-yellow bg-clip-text text-transparent text-3xl md:text-5xl font-extrabold leading-tight"
+                style={{ whiteSpace: 'normal', minWidth: 0, display: 'inline-block' }}
+              >
+                <ReactTyped
+                  strings={["Empowering Lives Through Education & Compassion"]}
+                  typeSpeed={60}
+                  backSpeed={40}
+                  loop
+                  showCursor={false}
+                />
               </span>
             </h1>
             <p className="text-xl mb-8 text-gray-700">
               Impact Charitable Trust works to uplift the educational and financial status of women and children, regardless of caste, creed, or religion.
             </p>
-            <div className="flex flex-wrap gap-4">
-              <a href="/#donate" tabIndex={0} className="bg-impact-green hover:bg-impact-green/90 text-white text-lg px-8 py-6 rounded shadow-lg hover:shadow-xl transition-all duration-300 animate-fade-in flex items-center gap-2 font-semibold focus:outline-none focus:ring-2 focus:ring-impact-green">
-                Donate Now <QrCode className="h-5 w-5" />
+            <div className="flex flex-wrap gap-6 justify-start items-center mt-4">
+              <a
+                href="#donate"
+                tabIndex={0}
+                className="bg-impact-green text-white font-bold text-lg px-8 py-4 text-center"
+              >
+                Donate Now
               </a>
-              <a href="#programs-section">
-                <Button 
-                  variant="outline" 
-                  className="border-impact-green text-impact-green hover:bg-impact-green hover:text-white text-lg px-8 py-6 shadow-md hover:shadow-lg transition-all duration-300 animate-fade-in delay-100"
-                >
-                  Our Programs
-                </Button>
+              <a
+                href="#programs-section"
+                className="bg-impact-green text-white font-bold text-lg px-8 py-4 text-center"
+              >
+                Our Programs
               </a>
             </div>
             {showQrCode && (

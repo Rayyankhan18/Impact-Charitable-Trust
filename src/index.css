@@ -3,6 +3,24 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  background: linear-gradient(120deg, #f8fef7 0%, #f5fbff 60%, #fffbe7 100%);
+  min-height: 100vh;
+  transition: background 0.4s cubic-bezier(0.4,0,0.2,1);
+}
+
+.card, .bg-white, .rounded-xl, .rounded-3xl, .shadow-lg, .shadow-2xl {
+  background: rgba(255,255,255,0.85) !important;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  box-shadow: 0 4px 24px 0 rgba(52,181,229,0.07), 0 1.5px 8px 0 rgba(138,208,63,0.06);
+  transition: box-shadow 0.3s cubic-bezier(0.4,0,0.2,1), background 0.3s cubic-bezier(0.4,0,0.2,1);
+}
+
+.section-padding {
+  transition: background 0.3s cubic-bezier(0.4,0,0.2,1);
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;

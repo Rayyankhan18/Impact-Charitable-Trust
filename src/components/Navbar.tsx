@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Logo from "@/components/ui/logo";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -26,18 +27,11 @@ const Navbar = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? "bg-white/95 backdrop-blur-sm shadow-md py-2"
-          : "bg-transparent py-4"
-      }`}
+      className="fixed top-0 left-0 right-0 z-50 bg-white shadow-md py-2"
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
-        <img 
-          src="/lovable-uploads/07dd1093-54e1-4bec-9228-a16d9058b83a.png"
-          alt="Impact Charitable Trust Logo"
-          className="h-8 w-auto"
-        />
+        {/* Use the Logo component for consistent logo display */}
+        <Logo className="h-12 w-auto" />
 
         <nav className="hidden md:flex items-center space-x-8">
           {navLinks.map((link) => (
@@ -49,39 +43,62 @@ const Navbar = () => {
               {link.name}
             </a>
           ))}
-          <a href="/#donate" className="bg-impact-green hover:bg-impact-green/90 text-white font-medium px-4 py-2 rounded transition-colors">Donate Now</a>
+          <a href="#donate" className="bg-impact-green hover:bg-impact-green/90 text-white font-medium px-4 py-2 rounded transition-colors">Donate Now</a>
         </nav>
 
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="md:hidden text-impact-dark"
+          className="md:hidden text-impact-dark ml-auto"
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+          style={{ marginLeft: 'auto' }}
         >
           {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
 
       {isMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 bg-white shadow-lg">
-          <nav className="container mx-auto px-4 py-4 flex flex-col space-y-4">
+        <div className="md:hidden fixed top-0 right-0 h-full w-4/5 max-w-xs bg-white shadow-xl z-50 transition-transform duration-300 transform translate-x-0 animate-slide-in-right" style={{ boxShadow: 'rgba(60,60,60,0.10) 0px 0px 32px 0px' }}>
+          <button
+            onClick={() => setIsMenuOpen(false)}
+            className="absolute top-4 right-4 text-impact-dark z-50"
+            aria-label="Close menu"
+          >
+            <X size={28} />
+          </button>
+          <nav className="flex flex-col space-y-6 px-8 py-24 items-end">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.path}
-                className="text-impact-dark hover:text-impact-green py-2 font-medium transition-colors"
+                className="text-impact-dark hover:text-impact-green py-2 font-medium transition-colors text-lg w-full text-right"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {link.name}
               </a>
             ))}
-            <Button className="bg-impact-green hover:bg-impact-green/90 w-full">
-              Donate Now
-            </Button>
+            <a href="#donate" className="bg-impact-green hover:bg-impact-green/90 w-full text-white py-2 px-4 rounded block text-right font-semibold transition-colors">Donate Now</a>
           </nav>
         </div>
       )}
+      <style>
+        {`
+          @keyframes slide-in-right {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(0); }
+          }
+          .animate-slide-in-right {
+            animation: slide-in-right 0.3s cubic-bezier(0.4,0,0.2,1);
+          }
+        `}
+      </style>
     </header>
   );
 };
 
 export default Navbar;
+
+// Add smooth scrolling globally
+if (typeof window !== 'undefined') {
+  document.documentElement.style.scrollBehavior = 'smooth';
+}
+

@@ -1,5 +1,6 @@
 
 import { Button } from "@/components/ui/button";
+import { ReactTyped } from 'react-typed';
 import { useState, useEffect } from "react";
 
 const carouselImages = [
@@ -40,7 +41,18 @@ const AboutSection = () => {
             <div className="inline-block bg-impact-green/10 rounded-full px-4 py-1 text-impact-green font-medium text-sm mb-4">
               About Us
             </div>
-            <h2 className="text-impact-dark mb-6">Our Vision & Mission</h2>
+            <h2
+  className="text-impact-dark mb-6 bg-gradient-to-r from-impact-green via-impact-blue to-impact-yellow bg-clip-text text-transparent"
+  style={{ whiteSpace: 'nowrap', overflow: 'hidden', minWidth: 0, display: 'inline-block' }}
+>
+  <ReactTyped
+    strings={["Our Vision & Mission"]}
+    typeSpeed={60}
+    backSpeed={40}
+    loop
+    showCursor={false}
+  />
+</h2>
             <p className="text-gray-600 mb-4">
               Impact Charitable Trust was established in February 2018 with the vision of uplifting the educational and financial status of women and children, regardless of caste, creed, or religion.
             </p>
