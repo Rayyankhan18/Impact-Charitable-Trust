@@ -111,11 +111,14 @@ const HeroSection = () => {
               <div className="mt-4 p-4 bg-white/90 backdrop-blur-sm rounded-lg shadow-lg animate-fade-in">
                 <div className="flex flex-col items-center">
                   <p className="text-sm text-gray-600 mb-2">Scan to donate</p>
-                  <img 
-                    src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://impact-charitable-trust.org/donate" 
-                    alt="Donation QR Code" 
-                    className="h-32 w-32 object-contain"
-                  />
+                  <picture>
+  <source srcSet="/Photos/qr-code.webp" type="image/webp" />
+  <img 
+    src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://impact-charitable-trust.org/donate" 
+    alt="Donation QR Code" 
+    className="h-32 w-32 object-contain"
+  />
+</picture>
                   <p className="text-xs text-gray-500 mt-2">Or visit our donation page</p>
                 </div>
               </div>

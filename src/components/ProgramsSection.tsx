@@ -101,13 +101,16 @@ export default function ProgramsSection() {
               {programs.map((program) => (
                 <Card key={program.id} className="overflow-hidden">
                   <div className="h-48 overflow-hidden">
-                    <img 
-                      src={program.image} 
-                      alt={program.title}
-                      className="w-full h-full object-cover"
-                      width={"100%"}
-                      height={192}
-                    />
+                    <picture>
+  <source srcSet={program.image.replace(/\.(jpg|jpeg|png)$/i, '.webp')} type="image/webp" />
+  <img 
+    src={program.image} 
+    alt={program.title}
+    className="w-full h-full object-cover"
+    width={"100%"}
+    height={192}
+  />
+</picture>
                   </div>
                   <CardContent className="p-6">
                     <div className="flex items-center gap-3 mb-4">

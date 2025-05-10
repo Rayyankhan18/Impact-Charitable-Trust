@@ -70,39 +70,48 @@ const SpecialPrograms = () => {
           <h3 className="text-2xl font-bold text-impact-dark mb-6 text-center">Other Special Programs</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="p-6 border border-gray-100 rounded-lg hover:shadow-md transition-shadow">
-              <img 
-                src="/Photos/Picture14.jpg" 
-                alt="Elderly Care" 
-                className="w-full h-40 object-contain rounded-md mb-4"
-                width={"100%"}
-                height={160}
-              />
+              <picture>
+  <source srcSet="/Photos/Picture14.webp" type="image/webp" />
+  <img 
+    src="/Photos/Picture14.jpg" 
+    alt="Elderly Care" 
+    className="w-full h-40 object-contain rounded-md mb-4"
+    width={"100%"}
+    height={160}
+  />
+</picture>
               <h4 className="font-bold text-impact-blue text-lg mb-2">Elderly Care</h4>
               <p className="text-gray-600 text-sm">
                 Establishing homes for the elderly with comprehensive care, activities, and community engagement.
               </p>
             </div>
             <div className="p-6 border border-gray-100 rounded-lg hover:shadow-md transition-shadow">
-              <img 
-                src="/Photos/Picture80.jpg" 
-                alt="Orphanage Support" 
-                className="w-full h-40 object-contain rounded-md mb-4"
-                width={"100%"}
-                height={160}
-              />
+              <picture>
+  <source srcSet="/Photos/Picture80.webp" type="image/webp" />
+  <img 
+    src="/Photos/Picture80.jpg" 
+    alt="Orphanage Support" 
+    className="w-full h-40 object-contain rounded-md mb-4"
+    width={"100%"}
+    height={160}
+  />
+</picture>
               <h4 className="font-bold text-impact-green text-lg mb-2">Orphanage Support</h4>
               <p className="text-gray-600 text-sm">
                 Running orphanages for boys and girls with free boarding and daycare.
               </p>
             </div>
             <div className="p-6 border border-gray-100 rounded-lg hover:shadow-md transition-shadow">
-              <img 
-                src="/Photos/WhatsApp%20Image%202025-05-02%20at%204.20.46%20PM%20(1).jpeg" 
-                alt="Disaster Relief" 
-                className="w-full h-40 object-contain rounded-md mb-4"
-                width={"100%"}
-                height={160}
-              />
+              <picture>
+  <source srcSet="/Photos/WhatsApp%20Image%202025-05-02%20at%204.20.46%20PM%20(1).webp" type="image/webp" />
+  <img 
+    src="/Photos/WhatsApp%20Image%202025-05-02%20at%204.20.46%20PM%20(1).jpeg" 
+    alt="Disaster Relief" 
+    className="w-full h-40 object-contain rounded-md mb-4"
+    width={"100%"}
+    height={160}
+  />
+</picture>
               <h4 className="font-bold text-amber-600 text-lg mb-2">Disaster Relief</h4>
               <p className="text-gray-600 text-sm">
                 Providing relief and rehabilitation for individuals displaced by disasters.

@@ -33,11 +33,14 @@ const DonationVolunteerSection = () => {
         <div className="max-w-md mx-auto mt-8 p-6 bg-white rounded-xl shadow-lg">
           <h3 className="text-xl font-bold mb-4 text-center">Donate Now</h3>
           <div className="flex justify-center">
-            <img 
-              src="/Photos/WhatsApp Image 2025-05-02 at 3.59.06 PM.jpeg" 
-              alt="Donate Now Details (UPI/Bank/QR)" 
-              className="w-full max-h-96 object-contain rounded-lg shadow"
-            />
+            <picture>
+  <source srcSet="/Photos/WhatsApp Image 2025-05-02 at 3.59.06 PM.webp" type="image/webp" />
+  <img 
+    src="/Photos/WhatsApp Image 2025-05-02 at 3.59.06 PM.jpeg" 
+    alt="Donate Now Details (UPI/Bank/QR)" 
+    className="w-full max-h-96 object-contain rounded-lg shadow"
+  />
+</picture>
           </div>
           <p className="text-center text-gray-600 mt-4">
             Use the details in the image to make your donation. Thank you for your support!
