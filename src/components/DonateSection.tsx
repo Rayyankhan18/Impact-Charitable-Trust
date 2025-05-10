@@ -64,6 +64,34 @@ const DonateSection = () => {
                   <span className="text-impact-dark">Track your impact through updates</span>
                 </li>
               </ul>
+              
+              {/* Registration Numbers */}
+              <div className="mt-6 p-4 bg-white/80 rounded-lg border border-impact-green/20 shadow-sm">
+                <h4 className="text-sm font-semibold text-impact-dark mb-2 uppercase tracking-wider">Registration Information</h4>
+                <div className="grid grid-cols-1 gap-2 text-sm">
+  {/* Each row is a flex row with label and number aligned */}
+  <div className="flex items-start gap-2">
+    <span className="font-medium text-impact-dark min-w-[180px]">• 80G REG. Number:</span>
+    <span className="text-gray-700 select-all">AABTI5527KF20251</span>
+  </div>
+  <div className="flex items-start gap-2">
+    <span className="font-medium text-impact-dark min-w-[180px]">• 12A REG. Number:</span>
+    <span className="text-gray-700 select-all">AABTI5527KE20251</span>
+  </div>
+  <div className="flex items-start gap-2">
+    <span className="font-medium text-impact-dark min-w-[180px]">• ICT Registration Number:</span>
+    <span className="text-gray-700 select-all">BKIV 210/2017-18</span>
+  </div>
+  <div className="flex items-start gap-2">
+    <span className="font-medium text-impact-dark min-w-[180px]">• Niti Ayog REG. Number:</span>
+    <span className="text-gray-700 select-all">KA/2018/0189339</span>
+  </div>
+  <div className="flex items-start gap-2">
+    <span className="font-medium text-impact-dark min-w-[180px]">• CSR Number:</span>
+    <span className="text-gray-700 select-all">00021483</span>
+  </div>
+</div>
+              </div>
             </div>
             {/* Divider */}
             <div className="hidden md:block w-px bg-gradient-to-b from-impact-green/20 via-impact-blue/20 to-transparent mx-0 my-8"></div>
