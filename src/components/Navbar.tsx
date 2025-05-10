@@ -7,6 +7,18 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
+  // Prevent background scroll when menu is open
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isMenuOpen]);
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
@@ -59,12 +71,12 @@ const Navbar = () => {
       {isMenuOpen && (
   <>
     {/* Backdrop */}
-    <div className="fixed inset-0 bg-black bg-opacity-40 backdrop-blur-sm z-40 transition-opacity duration-300" onClick={() => setIsMenuOpen(false)} />
+    <div className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm z-[99] transition-opacity duration-300" onClick={() => setIsMenuOpen(false)} />
     {/* Sidebar */}
-    <div className="md:hidden fixed top-0 right-0 h-full w-4/5 max-w-xs bg-white shadow-xl z-50 transition-transform duration-300 transform translate-x-0 animate-slide-in-right" style={{ boxShadow: 'rgba(60,60,60,0.10) 0px 0px 32px 0px' }}>
+    <div className="md:hidden fixed top-0 right-0 h-full w-4/5 max-w-xs bg-white shadow-xl z-[100] transition-transform duration-300 transform translate-x-0 animate-slide-in-right overflow-y-auto" style={{ boxShadow: 'rgba(60,60,60,0.10) 0px 0px 32px 0px' }}>
       <button
         onClick={() => setIsMenuOpen(false)}
-        className="absolute top-4 right-4 text-impact-dark z-50"
+        className="absolute top-4 right-4 text-impact-dark z-[101]"
         aria-label="Close menu"
       >
         <X size={28} />
