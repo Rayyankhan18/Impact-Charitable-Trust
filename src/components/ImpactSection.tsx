@@ -47,7 +47,7 @@ const ImpactSection = () => {
             <span className="flex items-center justify-center h-16 w-16 rounded-full bg-impact-blue/10 mb-3">
               <Heart className="h-8 w-8 text-impact-blue" />
             </span>
-            <AnimatedNumber value={250} suffix="+" className="text-3xl font-bold text-impact-blue" />
+            <AnimatedNumber value={14} suffix="+" className="text-3xl font-bold text-impact-blue" />
             <div className="text-gray-700 mt-2 font-medium">Medical Camps</div>
           </div>
           {/* Card 3 */}

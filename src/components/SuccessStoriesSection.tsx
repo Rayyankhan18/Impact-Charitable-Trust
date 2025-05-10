@@ -88,35 +88,22 @@ const SuccessStoriesSection = () => {
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {successStories.map((story) => (
-              <Card key={story.id} className="overflow-hidden hover:shadow-lg transition-shadow">
-                <CardContent className="p-6">
-                  <div className="flex items-center mb-4">
-                    <Avatar className="h-12 w-12 border-2 border-impact-green">
-                      <AvatarImage src={story.avatar} alt={story.name} />
-                      <AvatarFallback>{story.name.charAt(0)}</AvatarFallback>
-                    </Avatar>
-                    <div className="ml-3">
-                      <h3 className="text-lg font-bold text-impact-dark">{story.name}</h3>
-                      <p className="text-sm text-gray-500">{story.role}</p>
-                    </div>
-                  </div>
-                  <blockquote className="text-gray-600 italic border-l-2 border-impact-green pl-4">
-                    "{story.story}"
-                  </blockquote>
-                </CardContent>
-              </Card>
-            ))}
+  <Card key={story.id} className="shadow-md rounded-xl bg-white/90">
+    <CardContent className="p-6 flex flex-col items-start">
+      <div className="font-bold text-impact-dark text-lg leading-tight mb-2">{story.name}</div>
+      <blockquote className="text-impact-green border-l-4 border-impact-green pl-4 italic text-base">"{story.story}"</blockquote>
+    </CardContent>
+  </Card>
+))}
           </div>
           
           <div className="mt-12 text-center">
             <p className="text-gray-600 mb-4">
               These are just a few of the many lives we've touched. With your support, we can create many more success stories.
             </p>
-            <p className="font-semibold text-impact-dark">
-              Students Educated: <span className="text-impact-green">230+</span> | 
-              Medical Camps: <span className="text-impact-blue">25+</span> | 
-              Scholarships: <span className="text-impact-yellow">80+</span>
-            </p>
+            <div className="font-semibold text-base md:text-lg mt-10 text-center">
+  Students Educated: <span className="text-impact-green font-bold">230+</span> | Medical Camps: <span className="text-impact-blue font-bold">14+</span> | Scholarships: <span className="font-bold" style={{color:'#FFA500'}}>80+</span>
+</div>
           </div>
         </div>
       </div>

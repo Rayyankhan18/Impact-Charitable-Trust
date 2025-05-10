@@ -87,7 +87,7 @@ const DonateSection = () => {
                       <span className="font-semibold text-impact-dark">Volunteer With Us</span>
                       <p className="text-sm text-gray-600">Join our volunteer program and contribute your time and skills.</p>
                       <a 
-                        href="https://forms.google.com/volunteer-signup" 
+                        href="https://docs.google.com/forms/d/e/1FAIpQLSdf3CWT_OSfk9KgGTqeIssBGdq3HG8vKwbQmd5KgyfPL5I3tQ/viewform" 
                         target="_blank" 
                         rel="noopener noreferrer"
                         className="text-sm text-impact-green hover:underline mt-1 inline-block"

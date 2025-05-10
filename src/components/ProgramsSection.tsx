@@ -40,7 +40,7 @@ export default function ProgramsSection() {
       image: "/Photos/Picture78.jpg",
       stats: {
         patients: "1200",
-        camps: "25+",
+        camps: "14+",
         vaccinations: "250+"
       }
     },
