@@ -22,7 +22,7 @@ export default function ProgramsSection() {
       description:
         "Free coaching classes for school dropouts and special training for Islamic scholars to become professionals. We help students pass exams through recognized boards.",
       link: "#education",
-      image: "/Photos/Picture39.jpg",
+      image: "/Photos/Picture26.webp",
       stats: {
         students: "80+",
         passRate: "100%"

@@ -14,17 +14,17 @@ interface Story {
 const successStories: Story[] = [
   {
     id: 1,
-    name: "Sameena Banu (BCOM)",
+    name: "Sameena Banu (B.COM)",
     avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
     role: "",
-    story: "Through Impact's scholarship program, I was able to complete my BCOM Degree. Despite facing financial hardships, the trust supported my education."
+    story: "Through Impact's scholarship program, I was able to complete my B.COM Degree. Despite facing financial hardships, the trust supported my education."
   },
   {
     id: 2,
-    name: "Stella Mary (BCOM)",
+    name: "Stella Mary (B.COM)",
     avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
     role: "",
-    story: "Due to my Financial Crisis, I was able to complete my BCOM Degree. Despite facing financial hardships, the trust supported my education."
+    story: "Due to my Financial Crisis, I was able to complete my B.COM Degree. Despite facing financial hardships, the trust supported my education."
   },
   {
     id: 3,
@@ -35,7 +35,7 @@ const successStories: Story[] = [
   },
   {
     id: 4,
-    name: "Shazia Tabassum (BCOM)",
+    name: "Shazia Tabassum (B.COM)",
     avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
     role: "",
     story: "Impact Trust's educational program helped me complete my degree in education. I now teach mathematics at a local school and volunteer with Impact to help other students achieve their dreams."
@@ -49,7 +49,7 @@ const successStories: Story[] = [
   },
   {
     id: 6,
-    name: "Umme Hani (BCOM)",
+    name: "Umme Hani (B.COM)",
     avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
     role: "",
     story: "Impact Trust's scholarship program funded my accounting degree. They also provided mentorship and helped me secure an internship. Today, I work at a respected accounting private firm in Bangalore"
