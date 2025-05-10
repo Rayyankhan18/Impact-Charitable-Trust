@@ -4,7 +4,7 @@ import { ReactTyped } from 'react-typed';
 // List of all photo filenames in /public/Photos (add more as needed)
 const galleryImages = [
   ...Array.from({length: 127}, (_, i) => i + 1)
-    .filter(n => ![101, 103, 38, 39, 40, 14, 73, 70, 71, 127, 107, 108].includes(n))
+    .filter(n => ![101, 103, 38, 39, 40, 14, 73, 70, 71, 127, 107, 108, 96, 92, 78, 26].includes(n))
     .map(n => `Picture${n}.webp`)
 ];
 
