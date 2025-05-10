@@ -78,13 +78,13 @@ const HeroSection = () => {
             <h1 className="mb-4 md:mb-5">
               <span
                 className="block bg-gradient-to-r from-impact-green via-impact-blue to-impact-yellow bg-clip-text text-transparent text-3xl md:text-5xl font-extrabold leading-tight"
-                style={{ whiteSpace: 'normal', minWidth: 0, display: 'inline-block' }}
+                style={{ whiteSpace: 'normal', overflow: 'visible', minWidth: 0, display: 'block', wordBreak: 'break-word' }}
               >
                 <ReactTyped
                   strings={["Empowering Lives Through Education & Compassion"]}
                   typeSpeed={60}
                   backSpeed={40}
-                  loop
+                  loop={typeof window !== 'undefined' ? window.innerWidth >= 768 : true}
                   showCursor={false}
                 />
               </span>

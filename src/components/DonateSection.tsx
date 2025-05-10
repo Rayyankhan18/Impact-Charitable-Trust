@@ -12,17 +12,17 @@ const DonateSection = () => {
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2
-  className="text-impact-dark mb-4 bg-gradient-to-r from-impact-green via-impact-blue to-impact-yellow bg-clip-text text-transparent"
-  style={{ whiteSpace: 'nowrap', overflow: 'hidden', minWidth: 0, display: 'inline-block' }}
->
-  <ReactTyped
-    strings={["Make a Difference Today"]}
-    typeSpeed={60}
-    backSpeed={40}
-    loop
-    showCursor={false}
-  />
-</h2>
+            className="text-impact-dark mb-4 bg-gradient-to-r from-impact-green via-impact-blue to-impact-yellow bg-clip-text text-transparent"
+            style={{ whiteSpace: 'normal', overflow: 'visible', minWidth: 0, display: 'block', wordBreak: 'break-word' }}
+          >
+            <ReactTyped
+              strings={["Make a Difference Today"]}
+              typeSpeed={60}
+              backSpeed={40}
+              loop={typeof window !== 'undefined' ? window.innerWidth >= 768 : true}
+              showCursor={false}
+            />
+          </h2>
           <p className="text-gray-600 text-lg">
             Your contribution helps us continue our work and create lasting impact in the lives of those in need.
           </p>

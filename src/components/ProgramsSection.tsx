@@ -74,17 +74,17 @@ export default function ProgramsSection() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2
-  className="text-4xl font-bold mb-4 bg-gradient-to-r from-impact-green via-impact-blue to-impact-yellow bg-clip-text text-transparent"
-  style={{ whiteSpace: 'nowrap', overflow: 'hidden', minWidth: 0, display: 'inline-block' }}
->
-  <ReactTyped
-    strings={["Transforming Lives Through Our Programs"]}
-    typeSpeed={60}
-    backSpeed={40}
-    loop
-    showCursor={false}
-  />
-</h2>
+            className="text-4xl font-bold mb-4 bg-gradient-to-r from-impact-green via-impact-blue to-impact-yellow bg-clip-text text-transparent"
+            style={{ whiteSpace: 'normal', overflow: 'visible', minWidth: 0, display: 'block', wordBreak: 'break-word' }}
+          >
+            <ReactTyped
+              strings={["Transforming Lives Through Our Programs"]}
+              typeSpeed={60}
+              backSpeed={40}
+              loop={typeof window !== 'undefined' ? window.innerWidth >= 768 : true}
+              showCursor={false}
+            />
+          </h2>
           <p className="text-gray-600 text-lg max-w-3xl mx-auto">
             We develop initiatives that create lasting change through education, healthcare, and financial support for vulnerable communities.
           </p>
@@ -105,6 +105,8 @@ export default function ProgramsSection() {
                       src={program.image} 
                       alt={program.title}
                       className="w-full h-full object-cover"
+                      width={"100%"}
+                      height={192}
                     />
                   </div>
                   <CardContent className="p-6">

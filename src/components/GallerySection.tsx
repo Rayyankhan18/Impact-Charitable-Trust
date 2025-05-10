@@ -11,17 +11,17 @@ const GallerySection = () => {
     <section id="gallery" className="section-padding bg-gray-50">
       <div className="container mx-auto px-4">
         <h2
-  className="text-3xl md:text-4xl font-bold mb-8 bg-gradient-to-r from-impact-green via-impact-blue to-impact-yellow bg-clip-text text-transparent text-center"
-  style={{ whiteSpace: 'nowrap', overflow: 'hidden', minWidth: 0, display: 'inline-block' }}
->
-  <ReactTyped
-    strings={["Gallery"]}
-    typeSpeed={60}
-    backSpeed={40}
-    loop
-    showCursor={false}
-  />
-</h2>
+          className="text-3xl md:text-4xl font-bold mb-8 bg-gradient-to-r from-impact-green via-impact-blue to-impact-yellow bg-clip-text text-transparent text-center"
+          style={{ whiteSpace: 'normal', overflow: 'visible', minWidth: 0, display: 'block', wordBreak: 'break-word' }}
+        >
+          <ReactTyped
+            strings={["Gallery"]}
+            typeSpeed={60}
+            backSpeed={40}
+            loop={typeof window !== 'undefined' ? window.innerWidth >= 768 : true}
+            showCursor={false}
+          />
+        </h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {galleryImages.map((img, idx) => (
             <div key={img + idx} className="rounded-lg overflow-hidden shadow hover:shadow-lg transition-shadow duration-200 bg-white">
@@ -30,6 +30,8 @@ const GallerySection = () => {
                 alt={`Gallery ${idx + 1}`}
                 className="w-full h-48 object-cover hover:scale-105 transition-transform duration-200"
                 loading="lazy"
+                width={"100%"}
+                height={192}
               />
             </div>
           ))}

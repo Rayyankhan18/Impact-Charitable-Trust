@@ -14,13 +14,13 @@ const SpecialPrograms = () => {
         <div className="p-8">
           <h2
             className="text-3xl font-extrabold mb-8 text-center bg-gradient-to-r from-impact-green via-impact-blue to-impact-yellow bg-clip-text text-transparent animate-gradient-x drop-shadow-lg"
-            style={{ whiteSpace: 'nowrap', overflow: 'hidden', minWidth: 0, display: 'inline-block' }}
+            style={{ whiteSpace: 'normal', overflow: 'visible', minWidth: 0, display: 'block', wordBreak: 'break-word' }}
           >
             <ReactTyped
               strings={["Special Programs"]}
               typeSpeed={60}
               backSpeed={40}
-              loop
+              loop={typeof window !== 'undefined' ? window.innerWidth >= 768 : true}
               showCursor={false}
             />
           </h2>
@@ -74,6 +74,8 @@ const SpecialPrograms = () => {
                 src="/Photos/Picture14.jpg" 
                 alt="Elderly Care" 
                 className="w-full h-40 object-contain rounded-md mb-4"
+                width={"100%"}
+                height={160}
               />
               <h4 className="font-bold text-impact-blue text-lg mb-2">Elderly Care</h4>
               <p className="text-gray-600 text-sm">
@@ -85,6 +87,8 @@ const SpecialPrograms = () => {
                 src="/Photos/Picture80.jpg" 
                 alt="Orphanage Support" 
                 className="w-full h-40 object-contain rounded-md mb-4"
+                width={"100%"}
+                height={160}
               />
               <h4 className="font-bold text-impact-green text-lg mb-2">Orphanage Support</h4>
               <p className="text-gray-600 text-sm">
@@ -96,6 +100,8 @@ const SpecialPrograms = () => {
                 src="/Photos/WhatsApp%20Image%202025-05-02%20at%204.20.46%20PM%20(1).jpeg" 
                 alt="Disaster Relief" 
                 className="w-full h-40 object-contain rounded-md mb-4"
+                width={"100%"}
+                height={160}
               />
               <h4 className="font-bold text-amber-600 text-lg mb-2">Disaster Relief</h4>
               <p className="text-gray-600 text-sm">

@@ -176,13 +176,13 @@ const ContactSection = () => {
         <div className="text-center max-w-3xl mx-auto mb-8">
           <h2
             className="text-3xl md:text-4xl font-bold mb-2 md:mb-3 bg-gradient-to-r from-impact-green via-impact-blue to-impact-yellow bg-clip-text text-transparent"
-            style={{ whiteSpace: 'normal', minWidth: 0, display: 'inline-block' }}
+            style={{ whiteSpace: 'normal', overflow: 'visible', minWidth: 0, display: 'block', wordBreak: 'break-word' }}
           >
             <ReactTyped
               strings={["Contact Us"]}
               typeSpeed={60}
               backSpeed={40}
-              loop
+              loop={typeof window !== 'undefined' ? window.innerWidth >= 768 : true}
               showCursor={false}
             />
           </h2>
