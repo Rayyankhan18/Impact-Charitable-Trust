@@ -9,13 +9,32 @@ const Navbar = () => {
 
   // Prevent background scroll when menu is open
   useEffect(() => {
+    // When menu opens, prevent scrolling and append a style tag with an aggressive reset of any backdrop filters
     if (isMenuOpen) {
       document.body.style.overflow = 'hidden';
+      
+      // Create and insert a style tag with CSS that overrides any backdrop filters
+      const styleTag = document.createElement('style');
+      styleTag.id = 'menu-override-styles';
+      styleTag.innerHTML = `
+        body * {
+          backdrop-filter: none !important;
+          -webkit-backdrop-filter: none !important;
+        }
+      `;
+      document.head.appendChild(styleTag);
     } else {
       document.body.style.overflow = '';
+      
+      // Remove the style tag when menu closes
+      const styleTag = document.getElementById('menu-override-styles');
+      if (styleTag) styleTag.remove();
     }
+    
     return () => {
       document.body.style.overflow = '';
+      const styleTag = document.getElementById('menu-override-styles');
+      if (styleTag) styleTag.remove();
     };
   }, [isMenuOpen]);
 
@@ -69,34 +88,88 @@ const Navbar = () => {
       </div>
 
       {isMenuOpen && (
-  <>
-    {/* Backdrop */}
-    <div className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm z-[99] transition-opacity duration-300" onClick={() => setIsMenuOpen(false)} />
-    {/* Sidebar */}
-    <div className="md:hidden fixed top-0 right-0 h-full w-4/5 max-w-xs bg-white shadow-xl z-[100] transition-transform duration-300 transform translate-x-0 animate-slide-in-right overflow-y-auto" style={{ boxShadow: 'rgba(60,60,60,0.10) 0px 0px 32px 0px' }}>
-      <button
-        onClick={() => setIsMenuOpen(false)}
-        className="absolute top-4 right-4 text-impact-dark z-[101]"
-        aria-label="Close menu"
-      >
-        <X size={28} />
-      </button>
-      <nav className="flex flex-col space-y-6 px-8 pt-24 pb-8 items-end">
-        {navLinks.map((link) => (
-          <a
-            key={link.name}
-            href={link.path}
-            className="text-impact-dark hover:text-impact-green py-2 font-medium transition-colors text-lg w-full text-right"
-            onClick={() => setIsMenuOpen(false)}
+        <>
+          {/* Ultra-simple fullscreen white overlay */}
+          <div 
+            style={{
+              position: 'fixed',
+              top: 0,
+              left: 0,
+              width: '100%',
+              height: '100%',
+              backgroundColor: 'white',
+              zIndex: 2147483647, /* Highest possible z-index */
+              padding: '20px',
+              overflowY: 'auto',
+              display: 'flex',
+              flexDirection: 'column'
+            }}
           >
-            {link.name}
-          </a>
-        ))}
-        <a href="#donate" className="bg-impact-green hover:bg-impact-green/90 w-full text-white py-2 px-4 rounded block text-right font-semibold transition-colors">Donate Now</a>
-      </nav>
-    </div>
-  </>
-)}
+            <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '20px', borderBottom: '1px solid #eee', paddingBottom: '10px' }}>
+              <h2 style={{ fontSize: '20px', fontWeight: 'bold', margin: 0 }}>Menu</h2>
+              <button onClick={() => setIsMenuOpen(false)} style={{ background: 'none', border: 'none', cursor: 'pointer' }}>
+                <X size={24} />
+              </button>
+            </div>
+            
+            <a 
+              href="/" 
+              onClick={() => setIsMenuOpen(false)}
+              style={{ margin: '10px 0', padding: '12px', backgroundColor: '#f5f5f5', color: '#333', borderRadius: '4px', textDecoration: 'none', fontWeight: 500 }}
+            >
+              Home
+            </a>
+            
+            <a 
+              href="/#about" 
+              onClick={() => setIsMenuOpen(false)}
+              style={{ margin: '10px 0', padding: '12px', color: '#333', borderRadius: '4px', textDecoration: 'none', fontWeight: 500 }}
+            >
+              About
+            </a>
+            
+            <a 
+              href="/#programs-section" 
+              onClick={() => setIsMenuOpen(false)}
+              style={{ margin: '10px 0', padding: '12px', color: '#333', borderRadius: '4px', textDecoration: 'none', fontWeight: 500 }}
+            >
+              Programs
+            </a>
+            
+            <a 
+              href="/#impact-section" 
+              onClick={() => setIsMenuOpen(false)}
+              style={{ margin: '10px 0', padding: '12px', color: '#333', borderRadius: '4px', textDecoration: 'none', fontWeight: 500 }}
+            >
+              Impact
+            </a>
+            
+            <a 
+              href="/#gallery" 
+              onClick={() => setIsMenuOpen(false)}
+              style={{ margin: '10px 0', padding: '12px', color: '#333', borderRadius: '4px', textDecoration: 'none', fontWeight: 500 }}
+            >
+              Gallery
+            </a>
+            
+            <a 
+              href="/#contact" 
+              onClick={() => setIsMenuOpen(false)}
+              style={{ margin: '10px 0', padding: '12px', color: '#333', borderRadius: '4px', textDecoration: 'none', fontWeight: 500 }}
+            >
+              Contact
+            </a>
+            
+            <a 
+              href="#donate" 
+              onClick={() => setIsMenuOpen(false)}
+              style={{ margin: '20px 0 10px 0', padding: '12px', backgroundColor: '#8BC34A', color: 'white', borderRadius: '4px', textDecoration: 'none', fontWeight: 600, textAlign: 'center' }}
+            >
+              Donate Now
+            </a>
+          </div>
+        </>
+      )}
       <style>
         {`
           @keyframes slide-in-right {
@@ -118,4 +191,3 @@ export default Navbar;
 if (typeof window !== 'undefined') {
   document.documentElement.style.scrollBehavior = 'smooth';
 }
-

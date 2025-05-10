@@ -12,9 +12,16 @@ const Footer = () => {
           <p className="text-gray-300 mb-2 text-center">
             Empowering lives through education, healthcare, and compassion since 2018.
           </p>
-          <p className="text-gray-300 flex items-center justify-center gap-1 mb-6">
-            Made with <Heart className="h-4 w-4 text-impact-green" fill="#8AD03F" /> for a better tomorrow
-          </p>
+          <div className="flex flex-col items-center gap-1 mb-6">
+  <span className="text-gray-300 text-sm font-medium mb-1">
+    Designed & Developed by <a href="https://www.linkedin.com/in/rayyan-khan-" target="_blank" rel="noopener noreferrer" className="text-impact-green font-semibold hover:underline">Rayyan Khan</a>
+  </span>
+  <span className="text-gray-300 flex items-center justify-center gap-1">
+    Made with <Heart className="h-4 w-4 text-red-500" fill="#e63946" /> in
+    <span className="inline-block w-4 h-3 mx-1" style={{background: 'linear-gradient(90deg, #ff9933 33%, #fff 33%, #fff 66%, #138808 66%)', border: '1px solid #222', borderRadius: '2px'}}></span>
+    <span className="sr-only">India</span>
+  </span>
+</div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12 max-w-4xl mx-auto text-center">

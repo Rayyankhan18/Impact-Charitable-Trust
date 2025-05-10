@@ -24,7 +24,7 @@ const successStories: Story[] = [
     name: "Stella Mary (B.COM)",
     avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
     role: "",
-    story: "Due to my Financial Crisis, I was able to complete my B.COM Degree. Despite facing financial hardships, the trust supported my education."
+    story: "Impact Charitable Trust gave me hope when I needed it most. As a first-generation college student from a single-parent home, completing my B.COM degree seemed impossible. The trust not only provided financial assistance but also mentorship that helped me succeed."
   },
   {
     id: 3,
