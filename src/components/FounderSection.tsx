@@ -8,7 +8,7 @@ const FounderSection = () => (
       <div className="w-full lg:w-1/3 flex justify-center mb-6 lg:mb-0">
         <div className="relative rounded-full overflow-hidden shadow-2xl border-4 border-impact-green h-40 w-40 lg:h-60 lg:w-60 flex items-center justify-center bg-gray-50">
           <img
-            src="/Photos/WhatsApp Image 2025-05-02 at 3.17.55 PM (1).jpeg"
+            src="/Photos/Picture101.webp"
             alt="Founder portrait"
             className="object-cover w-full h-full"
           />

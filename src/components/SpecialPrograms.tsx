@@ -103,9 +103,9 @@ const SpecialPrograms = () => {
             </div>
             <div className="p-6 border border-gray-100 rounded-lg hover:shadow-md transition-shadow">
               <picture>
-  <source srcSet="/Photos/WhatsApp%20Image%202025-05-02%20at%204.20.46%20PM%20(1).webp" type="image/webp" />
+  <source srcSet="/Photos/Picture122.webp" type="image/webp" />
   <img 
-    src="/Photos/WhatsApp%20Image%202025-05-02%20at%204.20.46%20PM%20(1).jpeg" 
+    src="/Photos/Picture122.webp" 
     alt="Disaster Relief" 
     className="w-full h-40 object-contain rounded-md mb-4"
     width={"100%"}

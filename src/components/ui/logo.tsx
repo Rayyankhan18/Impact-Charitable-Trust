@@ -10,12 +10,12 @@ const Logo = ({ className, includeText = false }: LogoProps) => {
   return (
     <div className={`relative ${className}`}>
       <img
-        src="/Photos/WhatsApp Image 2025-05-09 at 12.06.04 PM.jpeg"
-        alt="Impact Charitable Trust Logo"
-        style={{ height: 48, width: 'auto', display: 'block' }}
-        className="object-contain"
-        draggable={false}
-      />
+  src="/Photos/logo1.webp"
+  alt="Impact Charitable Trust Logo"
+  aria-label="Impact Charitable Trust Logo"
+  className="object-contain h-14 w-auto mx-0 my-0" style={{ display: 'block', boxShadow: '0 2px 8px rgba(0,0,0,0.08)' }}
+  draggable={false}
+/>
 
 
     </div>

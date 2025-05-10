@@ -4,9 +4,9 @@ import { ReactTyped } from 'react-typed';
 import { useState, useEffect } from "react";
 
 const carouselImages = [
-  { src: "/Photos/Picture32.jpg", alt: "Vision 1" },
-  { src: "/Photos/Picture39.jpg", alt: "Vision 2" },
-  { src: "/Photos/Picture43.jpg", alt: "Vision 3" },
+  { src: "/Photos/Picture39.webp", alt: "Vision 1" },
+  { src: "/Photos/Picture40.webp", alt: "Vision 2" },
+  { src: "/Photos/Picture32.webp", alt: "Vision 3" },
 ];
 
 const AboutSection = () => {
