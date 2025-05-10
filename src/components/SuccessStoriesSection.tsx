@@ -14,44 +14,44 @@ interface Story {
 const successStories: Story[] = [
   {
     id: 1,
-    name: "Priya Sharma",
+    name: "Sameena Banu (BCOM)",
     avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-    role: "Medical Student",
+    role: "",
     story: "Through Impact's scholarship program, I was able to pursue my dream of becoming a doctor. Despite facing financial hardships, the trust supported my education and now I'm in my final year of medical school."
   },
   {
     id: 2,
-    name: "Arjun Patel",
+    name: "Stella Mary (BCOM)",
     avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-    role: "Software Engineer",
+    role: "",
     story: "After dropping out of school, I joined Impact's vocational training program. They taught me coding skills and helped me secure an internship. Today, I work as a software engineer at a leading IT company."
   },
   {
     id: 3,
-    name: "Fatima Khan",
+    name: "Shaista Banu (BBA)",
     avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-    role: "Entrepreneur",
+    role: "",
     story: "As a transgender woman, I faced discrimination everywhere. Impact's support program gave me vocational training in beauty services and a micro-loan to start my salon. Now I employ three other transgender individuals."
   },
   {
     id: 4,
-    name: "Rajan Verma",
+    name: "Shazia Tabassum (BCOM)",
     avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-    role: "Teacher",
+    role: "",
     story: "Impact Trust's educational program helped me complete my degree in education. I now teach mathematics at a local school and volunteer with Impact to help other students achieve their dreams."
   },
   {
     id: 5,
-    name: "Sundari Venkat",
+    name: "Wasiqa Naseem P (BCA)",
     avatar: "https://images.unsplash.com/photo-1519699047748-de8e457a634e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-    role: "Healthcare Worker",
+    role: "",
     story: "After attending Impact's healthcare training program, I secured a position as a community health worker. I now help provide essential healthcare services in my village, improving lives every day."
   },
   {
     id: 6,
-    name: "Vivek Singh",
+    name: "Umme Hani (BCOM)",
     avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-    role: "Accountant",
+    role: "",
     story: "Impact Trust's scholarship program funded my accounting degree. They also provided mentorship and helped me secure an internship. Today, I work at a respected accounting firm in Mumbai."
   },
 ];
@@ -102,7 +102,7 @@ const SuccessStoriesSection = () => {
               These are just a few of the many lives we've touched. With your support, we can create many more success stories.
             </p>
             <div className="font-semibold text-base md:text-lg mt-10 text-center">
-  Students Educated: <span className="text-impact-green font-bold">230+</span> | Medical Camps: <span className="text-impact-blue font-bold">14+</span> | Scholarships: <span className="font-bold" style={{color:'#FFA500'}}>80+</span>
+  Students Educated: <span className="text-impact-green font-bold">80+</span> | Medical Camps: <span className="text-impact-blue font-bold">14+</span> | Scholarships: <span className="font-bold" style={{color:'#FFA500'}}>80+</span>
 </div>
           </div>
         </div>
