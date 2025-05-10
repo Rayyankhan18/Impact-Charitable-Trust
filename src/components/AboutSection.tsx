@@ -3,20 +3,9 @@ import { Button } from "@/components/ui/button";
 import { ReactTyped } from 'react-typed';
 import { useState, useEffect } from "react";
 
-const carouselImages = [
-  { src: "/Photos/Picture39.webp", alt: "Vision 1" },
-  { src: "/Photos/Picture40.webp", alt: "Vision 2" },
-  { src: "/Photos/Picture32.webp", alt: "Vision 3" },
-];
+const staticImage = { src: "/Photos/Picture39.webp", alt: "Our Vision & Mission" };
 
 const AboutSection = () => {
-  const [currentImage, setCurrentImage] = useState(0);
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImage((prev) => (prev + 1) % carouselImages.length);
-    }, 3000);
-    return () => clearInterval(interval);
-  }, []);
   return (
     <section id="about" className="section-padding bg-gray-50">
       <div className="container mx-auto px-4">
@@ -24,13 +13,12 @@ const AboutSection = () => {
           <div className="order-2 lg:order-1">
             <div className="relative">
               <div className="rounded-2xl overflow-hidden shadow-2xl flex justify-center items-center h-72 md:h-96 w-full">
-                <img
-                  src={carouselImages[currentImage].src}
-                  alt={carouselImages[currentImage].alt}
-                  className="w-full h-full object-cover rounded-2xl shadow-lg transition-all duration-700"
-                  key={carouselImages[currentImage].src}
-                />
-              </div>
+  <img
+    src={staticImage.src}
+    alt={staticImage.alt}
+    className="w-full h-full object-cover rounded-2xl shadow-lg"
+  />
+</div>
               <div className="absolute -bottom-6 -right-6 bg-white p-4 rounded-lg shadow-lg">
                 <p className="text-impact-green font-bold text-xl">Est. 2018</p>
                 <p className="text-gray-600">Making a difference</p>
@@ -43,15 +31,9 @@ const AboutSection = () => {
             </div>
             <h2
   className="text-impact-dark mb-6 bg-gradient-to-r from-impact-green via-impact-blue to-impact-yellow bg-clip-text text-transparent"
-  style={{ whiteSpace: 'nowrap', overflow: 'hidden', minWidth: 0, display: 'inline-block' }}
+  style={{ whiteSpace: 'normal', minWidth: 0, display: 'inline-block' }}
 >
-  <ReactTyped
-    strings={["Our Vision & Mission"]}
-    typeSpeed={60}
-    backSpeed={40}
-    loop
-    showCursor={false}
-  />
+  Our Vision & Mission
 </h2>
             <p className="text-gray-600 mb-4">
               Impact Charitable Trust was established in February 2018 with the vision of uplifting the educational and financial status of women and children, regardless of caste, creed, or religion.
