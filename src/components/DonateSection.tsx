@@ -104,6 +104,15 @@ const DonateSection = () => {
                   className="mx-auto w-full max-w-xs object-contain rounded-lg shadow-lg border-2 border-impact-green/20 hover:scale-105 transition-transform duration-300"
                 />
                 <p className="mt-4 text-xs text-gray-500 text-center">Use the details in the image to make your donation. Thank you for your support!</p>
+<div className="mt-4 bg-impact-green/10 rounded-lg p-4 text-impact-dark text-sm text-center border border-impact-green/20">
+  <div className="font-semibold mb-1">Donations in favour of</div>
+  <div className="font-bold text-base mb-1">IMPACT CHARITABLE TRUST <span title="Registered">(®)</span></div>
+  <div className="mt-2">Our Bank:<br />
+    <span className="font-medium">Indian Bank, St. Mark’s Road Branch</span><br />
+    <span>A/c No: <span className="font-mono">6607404887</span></span><br />
+    <span>IFSC CODE: <span className="font-mono">IDIB000S283</span></span>
+  </div>
+</div>
               </div>
               <div className="w-full mt-8 bg-white/80 rounded-xl p-4 shadow-sm">
                 <h4 className="text-lg font-bold text-impact-dark mb-3 text-center">Other Ways to Support</h4>
