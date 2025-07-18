@@ -63,8 +63,13 @@ const SuccessStoriesSection = () => {
     <section className="section-padding bg-gradient-to-br from-impact-green/5 via-white to-impact-blue/5">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-2 md:mb-3 text-center">
-  <span className="bg-gradient-to-r from-impact-green via-impact-blue to-impact-yellow bg-clip-text text-transparent font-bold min-h-[56px] md:min-h-[112px] lg:min-h-[128px] whitespace-nowrap inline-block">
+          <h2 className="text-3xl md:text-4xl font-bold mb-2 md:mb-3 text-center leading-tight">
+  {/* Static fallback for space reservation */}
+  <span className="invisible select-none font-bold bg-gradient-to-r from-impact-green via-impact-blue to-impact-yellow bg-clip-text text-transparent block min-h-[2.8em] md:min-h-[3.8em] lg:min-h-[4.2em]">
+    Success Stories
+  </span>
+  {/* Animated heading */}
+  <span className="bg-gradient-to-r from-impact-green via-impact-blue to-impact-yellow bg-clip-text text-transparent font-bold whitespace-nowrap inline-block">
     <ReactTyped
       strings={["Success Stories"]}
       typeSpeed={60}
