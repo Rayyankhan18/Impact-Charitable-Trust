@@ -73,20 +73,19 @@ export default function ProgramsSection() {
     <div id="programs-section" className="section-padding bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2
-            className="text-3xl md:text-4xl font-bold mb-2 md:mb-3 bg-gradient-to-r from-impact-green via-impact-blue to-impact-yellow bg-clip-text text-transparent"
-            style={{ whiteSpace: 'normal', overflow: 'visible', minWidth: 0, display: 'block', wordBreak: 'break-word' }}
-          >
-            <div className="min-h-[56px]">
-              <ReactTyped
-                strings={["Transforming Lives Through Our Programs"]}
-                typeSpeed={60}
-                backSpeed={40}
-                loop={typeof window !== 'undefined' ? window.innerWidth >= 768 : true}
-                showCursor={false}
-              />
-            </div>
-          </h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-2 md:mb-3">
+  <div className="min-h-[56px]">
+    <span className="bg-gradient-to-r from-impact-green via-impact-blue to-impact-yellow bg-clip-text text-transparent font-bold">
+      <ReactTyped
+        strings={["Transforming Lives Through Our Programs"]}
+        typeSpeed={60}
+        backSpeed={40}
+        loop={typeof window !== 'undefined' ? window.innerWidth >= 768 : true}
+        showCursor={false}
+      />
+    </span>
+  </div>
+</h2>
           <p className="text-gray-600 text-lg max-w-3xl mx-auto">
             We develop initiatives that create lasting change through education, healthcare, and financial support for vulnerable communities.
           </p>
