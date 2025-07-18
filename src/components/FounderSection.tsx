@@ -17,15 +17,16 @@ const FounderSection = () => (
       <div className="w-full lg:w-2/3">
         <h2
   className="text-3xl md:text-5xl font-bold mb-2 bg-gradient-to-r from-impact-green via-impact-blue to-impact-yellow bg-clip-text text-transparent"
-  style={{ whiteSpace: 'nowrap', overflow: 'hidden', minWidth: 0, display: 'inline-block' }}
 >
-  <ReactTyped
-    strings={["Meet Our Founder"]}
-    typeSpeed={60}
-    backSpeed={40}
-    loop
-    showCursor={false}
-  />
+  <div className="min-h-[56px] md:min-h-[112px] lg:min-h-[128px] whitespace-nowrap">
+    <ReactTyped
+      strings={["Meet Our Founder"]}
+      typeSpeed={60}
+      backSpeed={40}
+      loop
+      showCursor={false}
+    />
+  </div>
 </h2>
         <h3 className="text-xl md:text-2xl font-semibold text-impact-dark mb-1">Mr. Hidayathulla Khan</h3>
         <p className="text-impact-blue text-base mb-3 italic">Distinguished Postgraduate • Social Worker • Businessman</p>
