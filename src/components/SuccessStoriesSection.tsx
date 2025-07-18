@@ -67,13 +67,15 @@ const SuccessStoriesSection = () => {
   className="text-3xl md:text-4xl font-bold mb-2 md:mb-3 bg-gradient-to-r from-impact-green via-impact-blue to-impact-yellow bg-clip-text text-transparent"
   style={{ whiteSpace: 'normal', minWidth: 0, display: 'inline-block' }}
 >
-  <ReactTyped
-    strings={["Success Stories"]}
-    typeSpeed={60}
-    backSpeed={40}
-    loop
-    showCursor={false}
-  />
+  <div className="min-h-[56px]">
+    <ReactTyped
+      strings={["Success Stories"]}
+      typeSpeed={60}
+      backSpeed={40}
+      loop
+      showCursor={false}
+    />
+  </div>
 </h2>
 <div className="block w-full">
   <span className="inline-block bg-white/50 backdrop-blur-sm rounded-full px-3 py-1 text-impact-dark font-medium text-xs md:text-sm mb-2 mt-1">

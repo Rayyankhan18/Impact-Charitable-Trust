@@ -30,11 +30,18 @@ const AboutSection = () => {
               About Us
             </div>
             <h2
-  className="text-impact-dark mb-6 bg-gradient-to-r from-impact-green via-impact-blue to-impact-yellow bg-clip-text text-transparent"
-  style={{ whiteSpace: 'normal', minWidth: 0, display: 'inline-block' }}
->
-  Our Vision & Mission
-</h2>
+              className="text-3xl md:text-4xl font-bold mb-2 md:mb-3 bg-gradient-to-r from-impact-green via-impact-blue to-impact-yellow bg-clip-text text-transparent"
+              style={{ whiteSpace: 'normal', overflow: 'visible', minWidth: 0, display: 'block', wordBreak: 'break-word' }}
+            >
+              <div className="min-h-[56px]">
+                <ReactTyped
+                  strings={["Our Vision & Mission"]}
+                  typeSpeed={60}
+                  backSpeed={40}
+                  showCursor={false}
+                />
+              </div>
+            </h2>
             <p className="text-gray-600 mb-4">
               Impact Charitable Trust was established in February 2018 with the vision of uplifting the educational and financial status of women and children, regardless of caste, creed, or religion.
             </p>

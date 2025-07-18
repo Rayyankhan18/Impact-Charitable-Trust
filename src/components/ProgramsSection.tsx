@@ -74,16 +74,18 @@ export default function ProgramsSection() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2
-            className="text-4xl font-bold mb-4 bg-gradient-to-r from-impact-green via-impact-blue to-impact-yellow bg-clip-text text-transparent"
+            className="text-3xl md:text-4xl font-bold mb-2 md:mb-3 bg-gradient-to-r from-impact-green via-impact-blue to-impact-yellow bg-clip-text text-transparent"
             style={{ whiteSpace: 'normal', overflow: 'visible', minWidth: 0, display: 'block', wordBreak: 'break-word' }}
           >
-            <ReactTyped
-              strings={["Transforming Lives Through Our Programs"]}
-              typeSpeed={60}
-              backSpeed={40}
-              loop={typeof window !== 'undefined' ? window.innerWidth >= 768 : true}
-              showCursor={false}
-            />
+            <div className="min-h-[56px]">
+              <ReactTyped
+                strings={["Transforming Lives Through Our Programs"]}
+                typeSpeed={60}
+                backSpeed={40}
+                loop={typeof window !== 'undefined' ? window.innerWidth >= 768 : true}
+                showCursor={false}
+              />
+            </div>
           </h2>
           <p className="text-gray-600 text-lg max-w-3xl mx-auto">
             We develop initiatives that create lasting change through education, healthcare, and financial support for vulnerable communities.

@@ -76,18 +76,20 @@ const HeroSection = () => {
               Transforming Lives Since 2018
             </div>
             <h1 className="mb-4 md:mb-5">
-              <span
-                className="block bg-gradient-to-r from-impact-green via-impact-blue to-impact-yellow bg-clip-text text-transparent text-3xl md:text-5xl font-extrabold leading-tight"
-                style={{ whiteSpace: 'normal', overflow: 'visible', minWidth: 0, display: 'block', wordBreak: 'break-word' }}
-              >
-                <ReactTyped
-                  strings={["Empowering Lives Through Education & Compassion"]}
-                  typeSpeed={60}
-                  backSpeed={40}
-                  loop={typeof window !== 'undefined' ? window.innerWidth >= 768 : true}
-                  showCursor={false}
-                />
-              </span>
+              <div className="min-h-[56px]">
+                <span
+                  className="block bg-gradient-to-r from-impact-green via-impact-blue to-impact-yellow bg-clip-text text-transparent text-3xl md:text-5xl font-extrabold leading-tight"
+                  style={{ whiteSpace: 'normal', overflow: 'visible', minWidth: 0, display: 'block', wordBreak: 'break-word' }}
+                >
+                  <ReactTyped
+                    strings={["Empowering Lives Through Education & Compassion"]}
+                    typeSpeed={60}
+                    backSpeed={40}
+                    loop={typeof window !== 'undefined' ? window.innerWidth >= 768 : true}
+                    showCursor={false}
+                  />
+                </span>
+              </div>
             </h1>
             <p className="text-xl mb-8 text-gray-700">
               Impact Charitable Trust works to uplift the educational and financial status of women and children, regardless of caste, creed, or religion.

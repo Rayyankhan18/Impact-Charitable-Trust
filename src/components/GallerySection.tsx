@@ -16,13 +16,15 @@ const GallerySection = () => {
           className="text-3xl md:text-4xl font-bold mb-8 bg-gradient-to-r from-impact-green via-impact-blue to-impact-yellow bg-clip-text text-transparent text-center"
           style={{ whiteSpace: 'normal', overflow: 'visible', minWidth: 0, display: 'block', wordBreak: 'break-word' }}
         >
-          <ReactTyped
-            strings={["Gallery"]}
-            typeSpeed={60}
-            backSpeed={40}
-            loop={typeof window !== 'undefined' ? window.innerWidth >= 768 : true}
-            showCursor={false}
-          />
+          <div className="min-h-[56px]">
+            <ReactTyped
+              strings={["Gallery"]}
+              typeSpeed={60}
+              backSpeed={40}
+              loop={typeof window !== 'undefined' ? window.innerWidth >= 768 : true}
+              showCursor={false}
+            />
+          </div>
         </h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {galleryImages.filter((_, idx) => idx !== 9).map((img, idx) => (

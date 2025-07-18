@@ -178,13 +178,15 @@ const ContactSection = () => {
             className="text-3xl md:text-4xl font-bold mb-2 md:mb-3 bg-gradient-to-r from-impact-green via-impact-blue to-impact-yellow bg-clip-text text-transparent"
             style={{ whiteSpace: 'normal', overflow: 'visible', minWidth: 0, display: 'block', wordBreak: 'break-word' }}
           >
-            <ReactTyped
-              strings={["Contact Us"]}
-              typeSpeed={60}
-              backSpeed={40}
-              loop={typeof window !== 'undefined' ? window.innerWidth >= 768 : true}
-              showCursor={false}
-            />
+            <div className="min-h-[56px]">
+              <ReactTyped
+                strings={["Contact Us"]}
+                typeSpeed={60}
+                backSpeed={40}
+                loop={typeof window !== 'undefined' ? window.innerWidth >= 768 : true}
+                showCursor={false}
+              />
+            </div>
           </h2>
           <div className="block w-full">
             <span className="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full font-medium text-xs md:text-sm mb-2 mt-1">

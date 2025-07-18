@@ -16,13 +16,15 @@ const SpecialPrograms = () => {
             className="text-3xl font-extrabold mb-8 text-center bg-gradient-to-r from-impact-green via-impact-blue to-impact-yellow bg-clip-text text-transparent animate-gradient-x drop-shadow-lg"
             style={{ whiteSpace: 'normal', overflow: 'visible', minWidth: 0, display: 'block', wordBreak: 'break-word' }}
           >
-            <ReactTyped
-              strings={["Special Programs"]}
-              typeSpeed={60}
-              backSpeed={40}
-              loop={typeof window !== 'undefined' ? window.innerWidth >= 768 : true}
-              showCursor={false}
-            />
+            <div className="min-h-[56px]">
+              <ReactTyped
+                strings={["Special Programs"]}
+                typeSpeed={60}
+                backSpeed={40}
+                loop={typeof window !== 'undefined' ? window.innerWidth >= 768 : true}
+                showCursor={false}
+              />
+            </div>
           </h2>
           <h3 className="text-2xl font-bold text-impact-dark mb-4">Transgender Support Initiative</h3>
           <p className="text-gray-600 mb-4">

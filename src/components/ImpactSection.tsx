@@ -22,15 +22,17 @@ const ImpactSection = () => {
       <div className="container mx-auto px-4 text-center">
         <h2
           className="text-3xl md:text-4xl font-bold mb-2 md:mb-3 bg-gradient-to-r from-impact-green via-impact-blue to-impact-yellow bg-clip-text text-transparent"
-          style={{ whiteSpace: 'normal', minWidth: 0, display: 'inline-block' }}
+          style={{ whiteSpace: 'normal', overflow: 'visible', minWidth: 0, display: 'block', wordBreak: 'break-word' }}
         >
-          <ReactTyped
-            strings={["Our Impact"]}
-            typeSpeed={60}
-            backSpeed={40}
-            loop
-            showCursor={false}
-          />
+          <div className="min-h-[56px]">
+            <ReactTyped
+              strings={["Our Impact"]}
+              typeSpeed={60}
+              backSpeed={40}
+              loop
+              showCursor={false}
+            />
+          </div>
         </h2>
         <div className="text-gray-500 text-base md:text-lg mb-8">Our Impact in Numbers (Since 2018)</div>
         <div className="flex flex-col md:flex-row justify-center items-stretch gap-6 md:gap-0 md:space-x-[-32px] relative z-10">
