@@ -157,12 +157,7 @@ export default function ProgramsSection() {
           <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
             Our programs are designed to create sustainable impact. We believe in empowering communities through education, healthcare, and financial support.
           </p>
-          <a
-            href="#donate"
-            style={{ backgroundColor: '#97d93c' }} className="text-white px-8 py-4 rounded-lg shadow-lg text-lg font-bold transition-colors inline-block text-center"
-          >
-            Make a Difference
-          </a>
+          
         </div>
       </div>
     </div>
