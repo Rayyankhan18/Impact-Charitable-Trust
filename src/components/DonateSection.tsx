@@ -99,7 +99,7 @@ const DonateSection = () => {
               <div className="w-full max-w-xs mx-auto bg-white rounded-2xl shadow-xl p-6 flex flex-col items-center hover:shadow-impact-green/30 transition-shadow relative">
                 <span className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-impact-green text-white text-xs font-semibold px-4 py-1 rounded-full shadow">Scan to Donate</span>
                 <img
-                  src="/Photos/WhatsApp Image 2025-07-18 at 8.38.57 PM.jpeg"
+                  src="/Photos/donation-photo.jpeg"
                   alt="Impact Charitable Trust Donation Photo"
                   className="mx-auto w-full max-w-xs object-contain rounded-lg shadow-lg border-2 border-impact-green/20 hover:scale-105 transition-transform duration-300"
                 />
