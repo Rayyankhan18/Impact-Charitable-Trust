@@ -159,7 +159,7 @@ export default function ProgramsSection() {
           </p>
           <a
             href="#donate"
-            className="bg-impact-green hover:bg-impact-green/90 text-white px-8 py-4 rounded-lg shadow-lg text-lg font-bold transition-colors inline-block text-center"
+            className="bg-lime-400 hover:bg-lime-500 text-white px-8 py-4 rounded-lg shadow-lg text-lg font-bold transition-colors inline-block text-center"
           >
             Make a Difference
           </a>
