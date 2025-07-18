@@ -67,7 +67,7 @@ const SuccessStoriesSection = () => {
   className="text-3xl md:text-4xl font-bold mb-2 md:mb-3 bg-gradient-to-r from-impact-green via-impact-blue to-impact-yellow bg-clip-text text-transparent"
   style={{ whiteSpace: 'normal', minWidth: 0, display: 'inline-block' }}
 >
-  <div className="min-h-[56px]">
+  <div className="min-h-[80px]">
     <ReactTyped
       strings={["Success Stories"]}
       typeSpeed={60}
