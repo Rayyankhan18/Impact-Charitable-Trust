@@ -63,11 +63,16 @@ const SuccessStoriesSection = () => {
     <section className="section-padding bg-gradient-to-br from-impact-green/5 via-white to-impact-blue/5">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2
-  className="text-3xl md:text-4xl font-bold mb-2 md:mb-3 bg-gradient-to-r from-impact-green via-impact-blue to-impact-yellow bg-clip-text text-transparent"
-  style={{ whiteSpace: 'normal', minWidth: 0, display: 'inline-block' }}
->
-  <div className="min-h-[56px] md:min-h-[112px] lg:min-h-[128px] whitespace-nowrap">
+          <h2 className="text-3xl md:text-4xl font-bold mb-2 md:mb-3 text-center relative">
+  {/* Hidden static heading for layout reservation */}
+  <span
+    className="invisible block absolute pointer-events-none select-none bg-gradient-to-r from-impact-green via-impact-blue to-impact-yellow bg-clip-text text-transparent font-bold whitespace-nowrap"
+    aria-hidden="true"
+  >
+    Success Stories
+  </span>
+  {/* Animated heading */}
+  <span className="relative bg-gradient-to-r from-impact-green via-impact-blue to-impact-yellow bg-clip-text text-transparent font-bold whitespace-nowrap min-h-[56px] md:min-h-[112px] lg:min-h-[128px]">
     <ReactTyped
       strings={["Success Stories"]}
       typeSpeed={60}
@@ -75,7 +80,7 @@ const SuccessStoriesSection = () => {
       loop
       showCursor={false}
     />
-  </div>
+  </span>
 </h2>
 <div className="block w-full">
   <span className="inline-block bg-white/50 backdrop-blur-sm rounded-full px-3 py-1 text-impact-dark font-medium text-xs md:text-sm mb-2 mt-1">
