@@ -108,7 +108,7 @@ const DonateSection = () => {
   <div className="font-semibold mb-1">Donations in favour of</div>
   <div className="font-bold text-base mb-1">IMPACT CHARITABLE TRUST <span title="Registered">(®)</span></div>
   <div className="mt-2">Our Bank:<br />
-    <span className="font-medium">Indian Bank, St. Mark’s Road Branch</span><br />
+    <span className="font-medium">Indian Bank, Richmond Circle Branch</span><br />
     <span>A/c No: <span className="font-mono">6607404887</span></span><br />
     <span>IFSC CODE: <span className="font-mono">IDIB000S283</span></span>
   </div>
